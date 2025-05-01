@@ -1,0 +1,15 @@
+{
+    "name": "previousnext/ds-nsw",
+    "type": "library",
+    "require": {
+        "php": ">=8.2",
+        "ramsey/collection": "^2.1.1",
+        "dpi/pinto": "^0"
+    },
+    "autoload": {
+        "psr-4": {
+            "PreviousNext\\Ds\\Nsw\\": "."
+        }
+    },
+    "license": "proprietary"
+}
