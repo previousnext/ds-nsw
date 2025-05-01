@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
-use Drupal\pinto\List\StreamWrapperAssetInterface;
 use Pinto\Attribute\Asset;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
@@ -12,7 +11,7 @@ use Pinto\List\ObjectListInterface;
 use PreviousNext\Ds\Nsw\Component;
 
 #[CanonicalProduct]
-enum NswGlobal implements ObjectListInterface, StreamWrapperAssetInterface {
+enum NswGlobal implements ObjectListInterface {
 
   use NswListTrait;
 

@@ -13,14 +13,6 @@ trait NswListTrait
 {
   use ListTrait;
 
-  final public function cssDirectory(): string {
-    return $this->nswAssetDir();
-  }
-
-  final public function jsDirectory(): string {
-    return $this->nswAssetDir();
-  }
-
   public function templateDirectory(): string
   {
     // Template directory relative to /data/ids/interchangeable-ds/components/design-system
@@ -34,17 +26,6 @@ trait NswListTrait
     return \strtolower(ltrim(\preg_replace_callback('/[A-Z]/', function ($matches) {
       return '-' . $matches[0];
     }, $this->name) ?? '', '-'));
-  }
-
-  private function nswAssetDir(): string
-  {
-    $pathFromDrupalRoot = realpath(sprintf('%s/../ids/interchangeable-ds/assets', \DRUPAL_ROOT));
-    $definition = ((new \ReflectionEnumUnitCase($this::class, $this->name))->getAttributes(Definition::class)[0] ?? null)?->newInstance();
-    if (null === $definition) {
-      return $pathFromDrupalRoot;
-    }
-
-    return $pathFromDrupalRoot;
   }
 
   private function dsDirectory(): string

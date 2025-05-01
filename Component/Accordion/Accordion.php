@@ -10,7 +10,7 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 
 #[Asset\Css('accordion.css', preprocess: true)]
-#[Asset\Js('accordion.entry.js', preprocess: true)]
+#[Asset\Js('accordion.entry.js', preprocess: true, attributes: ['type' => 'module'])]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 class Accordion extends CommonComponent\Accordion\Accordion implements Utility\NswObjectInterface {
 

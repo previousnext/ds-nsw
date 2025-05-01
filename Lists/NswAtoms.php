@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
-use Drupal\pinto\List\StreamWrapperAssetInterface;
 use Pinto\Attribute\Definition;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
@@ -13,7 +12,7 @@ use PreviousNext\Ds\Nsw\Atom;
 
 #[CanonicalProduct]
 #[DependencyOn(NswGlobal::All)]
-enum NswAtoms implements ObjectListInterface, StreamWrapperAssetInterface {
+enum NswAtoms implements ObjectListInterface {
 
   use NswListTrait;
 
