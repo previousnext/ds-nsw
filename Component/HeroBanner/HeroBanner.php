@@ -10,7 +10,7 @@ use Pinto\Attribute\Asset;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Atom;
 
-#[Asset\Css('hero.css', preprocess: true)]
+#[Asset\Css('hero-banner.css', preprocess: true)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\ModifySlots(add: [
   // @todo add bool type after https://github.com/dpi/pinto/issues/39
