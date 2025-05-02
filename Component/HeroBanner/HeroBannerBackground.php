@@ -8,16 +8,15 @@ use PreviousNext\Ds\Common\Component\HeroBanner\HeroBannerModifierInterface;
 use PreviousNext\Ds\Common\Modifier\Mutex;
 
 #[Mutex]
-enum HeroBannerBackground implements HeroBannerModifierInterface
-{
-    case Dark;
-    case White;
+enum HeroBannerBackground implements HeroBannerModifierInterface {
+  case Dark;
+  case White;
 
-    public function modifierName(): string
-    {
-        return match ($this) {
-            static::Dark => 'dark',
+  public function modifierName(): string {
+    return match ($this) {
+      static::Dark => 'dark',
             static::White => 'white',
-        };
-    }
+    };
+  }
+
 }

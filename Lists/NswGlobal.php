@@ -8,7 +8,6 @@ use Pinto\Attribute\Asset;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
 use Pinto\List\ObjectListInterface;
-use PreviousNext\Ds\Nsw\Component;
 
 #[CanonicalProduct]
 enum NswGlobal implements ObjectListInterface {
@@ -19,10 +18,10 @@ enum NswGlobal implements ObjectListInterface {
   #[DependencyOn(self::Icon)]
   case All;
 
-  #[Asset\Css('base.css', preprocess: true)]
+  #[Asset\Css('base.css', preprocess: TRUE)]
   case Base;
 
-  #[Asset\Css('icon.css', preprocess: true)]
+  #[Asset\Css('icon.css', preprocess: TRUE)]
   case Icon;
 
 }

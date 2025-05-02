@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Component\Accordion;
 
@@ -9,8 +9,8 @@ use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 
-#[Asset\Css('accordion.css', preprocess: true)]
-#[Asset\Js('accordion.entry.js', preprocess: true, attributes: ['type' => 'module'])]
+#[Asset\Css('accordion.css', preprocess: TRUE)]
+#[Asset\Js('accordion.entry.js', preprocess: TRUE, attributes: ['type' => 'module'])]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 class Accordion extends CommonComponent\Accordion\Accordion implements Utility\NswObjectInterface {
 
@@ -23,10 +23,11 @@ class Accordion extends CommonComponent\Accordion\Accordion implements Utility\N
       // @todo title is unused by the twig
       ->set('title', NULL)
       ->set('toggleAll', TRUE)
-      ->set('items', $this->map(fn (AccordionItem\AccordionItem $item): mixed => $item())->toArray())
+      // @todo fix
+      // @phpstan-ignore-next-line
+      ->set('items', $this->map(static fn (AccordionItem\AccordionItem $item): mixed => $item())->toArray())
       // @todo modifier  is unused by the twig
-      ->set('modifier', NULL)
-    ;
+      ->set('modifier', NULL);
   }
 
 }

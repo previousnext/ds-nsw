@@ -1,19 +1,19 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Atom\Media;
 
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
-use PreviousNext\Ds\Nsw\Atom\Image\Image;
-use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Component\Media\ExternalVideo\ExternalVideo;
+use PreviousNext\Ds\Nsw\Atom\Image\Image;
+use PreviousNext\Ds\Nsw\Utility;
 
 #[Slots\Attribute\RenameSlot(original: 'media', new: 'item')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
-#[Asset\Css('media.css', preprocess: true)]
+#[Asset\Css('media.css', preprocess: TRUE)]
 class Media extends CommonComponent\Media\Media implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
@@ -23,9 +23,8 @@ class Media extends CommonComponent\Media\Media implements Utility\NswObjectInte
       ->set('mediaType', match (TRUE) {
         $this->media instanceof Image => 'image',
         $this->media instanceof ExternalVideo => 'video',
-        default => throw new \LogicException(sprintf('Unhandled media of type: %s', $this->media::class)),
-      })
-    ;
+        default => throw new \LogicException(\sprintf('Unhandled media of type: %s', $this->media::class)),
+      });
   }
 
 }

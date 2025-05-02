@@ -4,32 +4,26 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
-use Pinto\Attribute\Definition;
 use PreviousNext\Ds\Common\List\ListTrait;
 use PreviousNext\Ds\Nsw\Utility\Twig;
-use function Safe\realpath;
 
-trait NswListTrait
-{
+trait NswListTrait {
   use ListTrait;
 
-  public function templateDirectory(): string
-  {
-    // Template directory relative to /data/ids/interchangeable-ds/components/design-system
+  public function templateDirectory(): string {
+    // Template directory relative to /data/components/design-system
     // See \Drupal\pnx_ds_nsw\Hook\Hooks::systemInfoAlter().
-    return sprintf('@%s/%s', Twig::Namespace, $this->dsDirectory());
+    return \sprintf('@%s/%s', Twig::NAMESPACE, $this->dsDirectory());
   }
 
-  final public function templateName(): string
-  {
+  final public function templateName(): string {
     // Cap names to hyphen between, then remove leading hyphen.
-    return \strtolower(ltrim(\preg_replace_callback('/[A-Z]/', function ($matches) {
+    return \strtolower(\ltrim(\preg_replace_callback('/[A-Z]/', static function ($matches) {
       return '-' . $matches[0];
     }, $this->name) ?? '', '-'));
   }
 
-  private function dsDirectory(): string
-  {
+  private function dsDirectory(): string {
     $enum = $this;
 
     $categoryDirectory = match (\get_class($this)) {
@@ -40,12 +34,14 @@ trait NswListTrait
     };
 
     if (\str_ends_with($this->name, 'Item')) {
-      // If the enum name ends with 'Item', just get the non-prefixed 'Item'-less enum.
+      // If the enum name ends with 'Item', just get the non-prefixed
+      // 'Item'-less enum.
       // E.g `AccordionItem` resolves to `Accordion`.
       /** @var static $enum */
-      $enum = $this::{\substr($this->name, 0, strlen('Item') * -1)};
+      $enum = $this::{\substr($this->name, 0, \strlen('Item') * -1)};
     }
 
     return $categoryDirectory . '/' . $enum->name;
   }
+
 }

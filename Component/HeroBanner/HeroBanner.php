@@ -1,16 +1,16 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Component\HeroBanner;
 
-use Pinto\Slots;
-use PreviousNext\Ds\Nsw\Utility;
 use Pinto\Attribute\Asset;
-use PreviousNext\Ds\Common\Component as CommonComponent;
+use Pinto\Slots;
 use PreviousNext\Ds\Common\Atom;
+use PreviousNext\Ds\Common\Component as CommonComponent;
+use PreviousNext\Ds\Nsw\Utility;
 
-#[Asset\Css('hero-banner.css', preprocess: true)]
+#[Asset\Css('hero-banner.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\ModifySlots(add: [
   // @todo add bool type after https://github.com/dpi/pinto/issues/39
@@ -31,7 +31,8 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
     if ($this->link instanceof Atom\Link\LinkWithLabel) {
       $this->link->aAttributes->addClass(['nsw-hero-banner__button']);
       match ($this->modifiers->getFirstInstanceOf(HeroBannerBackground::class)) {
-        // Intentionally do not mix HeroBannerBackground::modifierName() in with button classes.
+        // Intentionally do not mix HeroBannerBackground::modifierName() in with
+        // button classes.
         HeroBannerBackground::Dark => $this->link->aAttributes->addClass(['nsw-button--dark']),
         HeroBannerBackground::White => $this->link->aAttributes->addClass(['nsw-button--white']),
         default => NULL,
@@ -46,10 +47,9 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('links_title', TRUE)
       ->set('links', \array_map(fn (Atom\Link\Link $link) => $this->link?->renderArray(), $this->links?->toArray() ?? []))
       ->set('modifiers', $this->modifiers->getInstancesOf(HeroBannerBackground::class)->map(
-        static fn (HeroBannerBackground $modifier): string => $modifier->modifierName()
+        static fn (HeroBannerBackground $modifier): string => $modifier->modifierName(),
       )->toArray())
-      ->set('containerAttributes', $this->containerAttributes)
-    ;
+      ->set('containerAttributes', $this->containerAttributes);
   }
 
 }
