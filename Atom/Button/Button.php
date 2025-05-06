@@ -5,11 +5,11 @@ declare(strict_types=1);
 namespace PreviousNext\Ds\Nsw\Atom\Button;
 
 use Pinto\Slots;
-use PreviousNext\Ds\Common\Component as CommonComponent;
-use PreviousNext\Ds\Common\Component\Button\ButtonType;
+use PreviousNext\Ds\Common\Atom as CommonAtom;
+use PreviousNext\Ds\Common\Atom\Button\ButtonType;
 use PreviousNext\Ds\Nsw\Utility;
 
-class Button extends CommonComponent\Button\Button implements Utility\NswObjectInterface {
+class Button extends CommonAtom\Button\Button implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
 
