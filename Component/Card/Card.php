@@ -6,7 +6,6 @@ namespace PreviousNext\Ds\Nsw\Component\Card;
 
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
-use PreviousNext\Ds\Common\Atom\Link\LinkWithLabel;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 
@@ -27,7 +26,7 @@ class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterfa
       ->set('links', $this->links)
       ->set('heading', $this->heading?->heading)
       ->set('content', $this->content?->markup)
-      ->set('link', $this->link instanceof LinkWithLabel ? $this->link->markup() : $this->link?->url)
+      ->set('link', $this->link)
       ->set('tags', \implode(' ', \array_map(static function ($tag) {
         return $tag->title;
       }, $this->tags->toArray())))

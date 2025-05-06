@@ -6,7 +6,6 @@ namespace PreviousNext\Ds\Nsw\Layout\Section;
 
 use Pinto\Attribute\Asset\Css;
 use Pinto\Slots;
-use PreviousNext\Ds\Common\Atom;
 use PreviousNext\Ds\Common\Layout as CommonLayouts;
 use PreviousNext\Ds\Nsw\Utility;
 
@@ -27,7 +26,7 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
       ->set('as', $this->as->element())
       ->set('heading', $this->heading?->heading)
       ->set('content', $this->content?->markup)
-      ->set('link', $this->link instanceof Atom\Link\LinkWithLabel ? $this->link->markup() : $this->link?->url)
+      ->set('link', $this->link)
       // @todo do something with modifiers:
       ->set('modifiers', []);
   }

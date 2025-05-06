@@ -8,19 +8,20 @@ use PreviousNext\Ds\Common\List\ListTrait;
 use PreviousNext\Ds\Nsw\Utility\Twig;
 
 trait NswListTrait {
-  use ListTrait;
 
-  public function templateDirectory(): string {
-    // Template directory relative to /data/components/design-system
-    // See \Drupal\pnx_ds_nsw\Hook\Hooks::systemInfoAlter().
-    return \sprintf('@%s/%s', Twig::NAMESPACE, $this->dsDirectory());
-  }
+  use ListTrait;
 
   final public function templateName(): string {
     // Cap names to hyphen between, then remove leading hyphen.
     return \strtolower(\ltrim(\preg_replace_callback('/[A-Z]/', static function ($matches) {
       return '-' . $matches[0];
     }, $this->name) ?? '', '-'));
+  }
+
+  public function templateDirectory(): string {
+    // Template directory relative to /data/components/design-system
+    // See \Drupal\pnx_ds_nsw\Hook\Hooks::systemInfoAlter().
+    return \sprintf('@%s/%s', Twig::NAMESPACE, $this->dsDirectory());
   }
 
   private function dsDirectory(): string {

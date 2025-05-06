@@ -9,7 +9,6 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Component\Button\ButtonType;
 use PreviousNext\Ds\Nsw\Utility;
 
-#[Slots\Attribute\RenameSlot('link', 'href')]
 class Button extends CommonComponent\Button\Button implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
@@ -24,7 +23,7 @@ class Button extends CommonComponent\Button\Button implements Utility\NswObjectI
 
     return parent::build($build)
       ->set('title', $this->title)
-      ->set('link', $this->link?->url->toString())
+      ->set('href', $this->href)
       ->set('as', $as);
     }
   }

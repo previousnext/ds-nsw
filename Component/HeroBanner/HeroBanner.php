@@ -27,25 +27,27 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
     // Image wrapper needs a hero specific class.
     $this->image?->containerAttributes->addClass(['nsw-hero-banner__image']);
 
+    // phpcs:disable Drupal.Commenting.InlineComment.SpacingBefore
+    // phpcs:disable Drupal.Files.LineLength.TooLong
     // When the link is a link with label, add classes to the wrapper:
-    if ($this->link instanceof Atom\Link\LinkWithLabel) {
-      $this->link->aAttributes->addClass(['nsw-hero-banner__button']);
-      match ($this->modifiers->getFirstInstanceOf(HeroBannerBackground::class)) {
-        // Intentionally do not mix HeroBannerBackground::modifierName() in with
-        // button classes.
-        HeroBannerBackground::Dark => $this->link->aAttributes->addClass(['nsw-button--dark']),
-        HeroBannerBackground::White => $this->link->aAttributes->addClass(['nsw-button--white']),
-        default => NULL,
-      };
-    }
-
+    // @todo FIX
+    // if ($this->link instanceof Atom\Link\LinkWithLabel) {
+    //   $this->link->aAttributes->addClass(['nsw-hero-banner__button']);
+    //   match ($this->modifiers->getFirstInstanceOf(HeroBannerBackground::class)) {
+    //     // Intentionally do not mix HeroBannerBackground::modifierName() in with
+    //     // button classes.
+    //     HeroBannerBackground::Dark => $this->link->aAttributes->addClass(['nsw-button--dark']),
+    //     HeroBannerBackground::White => $this->link->aAttributes->addClass(['nsw-button--white']),
+    //     default => NULL,
+    //   };
+    // }
     return $build
       ->set('title', $this->title)
       ->set('subtitle', $this->subtitle)
-      ->set('link', $this->link?->renderArray() ?? NULL)
+      ->set('link', $this->link)
       ->set('image', $this->image)
       ->set('links_title', TRUE)
-      ->set('links', \array_map(fn (Atom\Link\Link $link) => $this->link?->renderArray(), $this->links?->toArray() ?? []))
+      ->set('links', \array_map(fn (Atom\Link\Link $link) => ($this->link)(), $this->links?->toArray() ?? []))
       ->set('modifiers', $this->modifiers->getInstancesOf(HeroBannerBackground::class)->map(
         static fn (HeroBannerBackground $modifier): string => $modifier->modifierName(),
       )->toArray())
