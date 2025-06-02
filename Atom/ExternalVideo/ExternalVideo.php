@@ -7,9 +7,11 @@ namespace PreviousNext\Ds\Nsw\Atom\ExternalVideo;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Slots\Attribute\RenameSlot(original: 'source', new: 'src')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Scenarios([CommonComponent\Media\ExternalVideo\ExternalVideoScenarios::class])]
 class ExternalVideo extends CommonComponent\Media\ExternalVideo\ExternalVideo implements Utility\NswObjectInterface {
   use Utility\ObjectTrait;
 

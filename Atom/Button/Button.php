@@ -8,7 +8,9 @@ use Pinto\Slots;
 use PreviousNext\Ds\Common\Atom as CommonAtom;
 use PreviousNext\Ds\Common\Atom\Button\ButtonType;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
+#[Scenarios([CommonAtom\Button\ButtonScenarios::class])]
 class Button extends CommonAtom\Button\Button implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;

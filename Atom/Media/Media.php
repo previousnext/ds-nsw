@@ -10,10 +10,12 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Component\Media\ExternalVideo\ExternalVideo;
 use PreviousNext\Ds\Nsw\Atom\Image\Image;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Slots\Attribute\RenameSlot(original: 'media', new: 'item')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Asset\Css('media.css', preprocess: TRUE)]
+#[Scenarios([CommonComponent\Media\MediaScenarios::class])]
 class Media extends CommonComponent\Media\Media implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;

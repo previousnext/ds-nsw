@@ -8,10 +8,12 @@ use Pinto\Attribute\Asset;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Slots\Attribute\RenameSlot(original: 'heading', new: 'title')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Asset\Css('card.css', preprocess: TRUE)]
+#[Scenarios([CardScenarios::class])]
 class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;

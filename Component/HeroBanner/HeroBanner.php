@@ -6,9 +6,10 @@ namespace PreviousNext\Ds\Nsw\Component\HeroBanner;
 
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
-use PreviousNext\Ds\Common\Atom;
+use PreviousNext\Ds\Common\Atom as CommonAtom;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('hero-banner.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
@@ -16,6 +17,7 @@ use PreviousNext\Ds\Nsw\Utility;
   // @todo add bool type after https://github.com/dpi/pinto/issues/39
   new Slots\Slot('links_title'),
 ])]
+#[Scenarios([HeroBannerScenarios::class])]
 class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
@@ -47,7 +49,7 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('link', $this->link)
       ->set('image', $this->image)
       ->set('links_title', TRUE)
-      ->set('links', \array_map(fn (Atom\Link\Link $link) => ($this->link)(), $this->links?->toArray() ?? []))
+      ->set('links', \array_map(fn (CommonAtom\Link\Link $link) => ($this->link)(), $this->links?->toArray() ?? []))
       ->set('modifiers', $this->modifiers->getInstancesOf(HeroBannerBackground::class)->map(
         static fn (HeroBannerBackground $modifier): string => $modifier->modifierName(),
       )->toArray())

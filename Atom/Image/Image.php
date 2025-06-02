@@ -8,11 +8,13 @@ use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Component\Media\Image\ImageSource;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Slots\Attribute\RenameSlot(original: 'source', new: 'src')]
 #[Slots\Attribute\RenameSlot(original: 'altText', new: 'alt')]
 #[Slots\Attribute\RenameSlot(original: 'loadingType', new: 'loading')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Scenarios([ImageScenarios::class])]
 class Image extends CommonComponent\Media\Image\Image implements Utility\NswObjectInterface {
   use Utility\ObjectTrait;
 
