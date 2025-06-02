@@ -6,7 +6,7 @@
         "php": ">=8.2",
         "previousnext/ds-common": "*",
         "ramsey/collection": "^2.1.1",
-        "dpi/pinto": "^0"
+        "dpi/pinto": "^0.4.1"
     },
     "autoload": {
         "psr-4": {
