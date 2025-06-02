@@ -1,6 +1,7 @@
 {
     "name": "previousnext/ds-nsw",
     "type": "library",
+    "version": "0.0.1",
     "require": {
         "php": ">=8.2",
         "previousnext/ds-common": "*",

@@ -42,6 +42,7 @@ trait NswListTrait {
       $enum = $this::{\substr($this->name, 0, \strlen('Item') * -1)};
     }
 
+    // E.g "Component/Card".
     return $categoryDirectory . '/' . $enum->name;
   }
 
