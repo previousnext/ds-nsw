@@ -46,4 +46,12 @@ trait NswListTrait {
     return $categoryDirectory . '/' . $enum->name;
   }
 
+  public function cssDirectory(): string {
+    return \Safe\realpath(\DRUPAL_ROOT) . '/libraries/nswds';
+  }
+
+  public function jsDirectory(): string {
+    return \Safe\realpath(\DRUPAL_ROOT) . '/libraries/nswds';
+  }
+
 }
