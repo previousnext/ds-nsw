@@ -1,0 +1,16 @@
+'#theme': 15a6a101c2-NswAtoms-Button
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-Button
+'#title': 'Link button'
+'#href': ~
+'#as': button
+'#modifier': ~
+'#disabled': false
+'#iconOnly': false
+'#iconStart': ~
+'#iconEnd': ~
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

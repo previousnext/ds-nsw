@@ -1,0 +1,37 @@
+'#theme': 80fed84dcc-NswComponents-HeroBanner
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-HeroBanner
+'#title': Title!
+'#subtitle': Subtitle!
+'#link': ~
+'#image':
+    '#theme': 15a6a101c2-NswAtoms-Image
+    '#attached':
+        library:
+            - pinto/15a6a101c2-NswAtoms-Image
+    '#src': 'https://picsum.photos/seed/2025-06-04/600/200'
+    '#alt': 'Picsum Sample'
+    '#width': 600
+    '#height': 200
+    '#loading': eager
+    '#sources': {  }
+    '#imageAttributes': {  }
+    '#attributes':
+        class:
+            - nsw-hero-banner__image
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#links': {  }
+'#highlight': true
+'#modifiers':
+    - dark
+'#attributes':
+    fixme: {  }
+'#links_title': true
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

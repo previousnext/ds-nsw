@@ -1,0 +1,12 @@
+'#theme': 15a6a101c2-NswAtoms-Video
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-Video
+'#src': 'https://www.youtube.com/watch?v=QrGrOK8oZG8'
+'#title': 'Too Many Cooks 👨‍🍳'
+'#duration': 671
+'#attributes': {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

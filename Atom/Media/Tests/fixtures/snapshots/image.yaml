@@ -1,0 +1,31 @@
+'#theme': 15a6a101c2-NswAtoms-Media
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-Media
+'#item':
+    '#theme': 15a6a101c2-NswAtoms-Image
+    '#attached':
+        library:
+            - pinto/15a6a101c2-NswAtoms-Image
+    '#src': 'https://picsum.photos/seed/2025-06-04/256/256'
+    '#alt': 'Picsum Sample'
+    '#width': 256
+    '#height': 256
+    '#loading': eager
+    '#sources': {  }
+    '#imageAttributes': {  }
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#caption': 'An image.'
+'#attribution': ~
+'#alignment':
+    name: Center
+'#mediaType': image
+'#attributes': {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
