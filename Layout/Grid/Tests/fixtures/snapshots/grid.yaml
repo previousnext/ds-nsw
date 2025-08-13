@@ -1,0 +1,45 @@
+'#theme': 90332a4d51-NswLayouts-Grid
+'#attached':
+    library:
+        - pinto/90332a4d51-NswLayouts-Grid
+'#items':
+    -
+        '#theme': 90332a4d51-NswLayouts-GridItem
+        '#attached':
+            library:
+                - pinto/90332a4d51-NswLayouts-GridItem
+        '#item': {  }
+        '#isContainer': true
+        '#modifiers': {  }
+        '#as': li
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 90332a4d51-NswLayouts-GridItem
+        '#attached':
+            library:
+                - pinto/90332a4d51-NswLayouts-GridItem
+        '#item': {  }
+        '#isContainer': true
+        '#modifiers': {  }
+        '#as': div
+        '#attributes':
+            foo: {  }
+            class:
+                - 'gi hello'
+                - 'gi world'
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#modifiers': {  }
+'#as': ul
+'#attributes':
+    fixme: {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

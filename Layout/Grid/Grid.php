@@ -9,9 +9,14 @@ use Pinto\Slots;
 use PreviousNext\Ds\Common\Layout as CommonLayout;
 use PreviousNext\Ds\Common\Modifier\ModifierClassInterface;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('grid.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Scenarios([
+  CommonLayout\Grid\GridScenarios::class,
+  GridScenarios::class,
+])]
 class Grid extends CommonLayout\Grid\Grid implements Utility\NswObjectInterface {
   use Utility\ObjectTrait;
 
