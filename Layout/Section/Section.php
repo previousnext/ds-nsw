@@ -24,7 +24,7 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
       // @todo Common/shapes has `container` but NSW template does not.
       ->set('isContainer', NULL)
       ->set('as', $this->as->element())
-      ->set('heading', $this->heading?->heading)
+      ->set('heading', $this->heading)
       ->set('content', $this->content?->markup)
       ->set('link', $this->link)
       // @todo do something with modifiers:

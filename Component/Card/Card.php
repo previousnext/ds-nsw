@@ -26,7 +26,7 @@ class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterfa
       ->set('modifiers', [])
       ->set('image', $this->image)
       ->set('links', $this->links)
-      ->set('heading', $this->heading?->heading)
+      ->set('heading', $this->heading)
       ->set('content', $this->content?->markup)
       ->set('link', $this->link)
       ->set('tags', \implode(' ', \array_map(static function ($tag) {

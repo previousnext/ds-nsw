@@ -52,7 +52,7 @@ final class CardScenarios {
         CommonAtom\Tag\Tag::create('Foo'),
         CommonAtom\Tag\Tag::create('Foo'),
       ]),
-      heading: CommonAtom\Heading\Heading::create('A Heading!!!'),
+      heading: CommonAtom\Heading\Heading::create('A Heading!!!', \PreviousNext\Ds\Common\Atom\Heading\HeadingLevel::Two),
       content: CommonAtom\Html\Html::create(Markup::create('<strong>Hello</strong> World!')),
       link: CommonAtom\Link\Link::create(title: '', url: $url),
     // ?iterable $modifiers
