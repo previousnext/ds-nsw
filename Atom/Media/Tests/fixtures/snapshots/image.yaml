@@ -7,8 +7,8 @@
     '#attached':
         library:
             - pinto/15a6a101c2-NswAtoms-Image
-    '#src': 'https://picsum.photos/seed/2025-06-04/256/256'
-    '#alt': 'Picsum Sample'
+    '#src': /256-256-256px.jpg
+    '#alt': Sample
     '#width': 256
     '#height': 256
     '#loading': eager
