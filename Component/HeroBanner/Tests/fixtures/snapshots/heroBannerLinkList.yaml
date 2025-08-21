@@ -15,24 +15,7 @@
         tags: {  }
         max-age: -1
 '#subtitle': 'Hero Link List Subtitle!'
-'#link':
-    '#theme': c2e75f8655-CommonAtoms-Link
-    '#attached':
-        library:
-            - pinto/c2e75f8655-CommonAtoms-Link
-    '#title': 'Hero Banner Link!'
-    '#href': 'http://example.com/'
-    '#more': false
-    '#external': false
-    '#current': false
-    '#download': false
-    '#iconStart': ~
-    '#iconEnd': ~
-    '#attributes': {  }
-    '#cache':
-        contexts: {  }
-        tags: {  }
-        max-age: -1
+'#link': ~
 '#image': ~
 '#links':
     -
@@ -40,7 +23,7 @@
         '#attached':
             library:
                 - pinto/c2e75f8655-CommonAtoms-Link
-        '#title': ''
+        '#title': 'A link'
         '#href': 'http://example.com/'
         '#more': false
         '#external': false
@@ -90,8 +73,7 @@
             tags: {  }
             max-age: -1
 '#highlight': false
-'#modifiers':
-    - dark
+'#modifiers': {  }
 '#attributes':
     fixme: {  }
 '#links_title': true

@@ -7,38 +7,35 @@
     '#attached':
         library:
             - pinto/c2e75f8655-CommonAtoms-Heading
-    '#heading': Title!
+    '#heading': 'Hero Link List Title!'
     '#level': h1
     '#attributes': {  }
     '#cache':
         contexts: {  }
         tags: {  }
         max-age: -1
-'#subtitle': Subtitle!
-'#link': ~
-'#image':
-    '#theme': 15a6a101c2-NswAtoms-Image
+'#subtitle': ~
+'#link':
+    '#theme': 15a6a101c2-NswAtoms-Button
     '#attached':
         library:
-            - pinto/15a6a101c2-NswAtoms-Image
-    '#src': /600-200-ppb.jpg
-    '#alt': Sample
-    '#width': 600
-    '#height': 200
-    '#loading': eager
-    '#sources': {  }
-    '#imageAttributes': {  }
-    '#attributes':
-        class:
-            - nsw-hero-banner__image
+            - pinto/15a6a101c2-NswAtoms-Button
+    '#title': 'Hero Banner Button!'
+    '#href': 'http://example.com/'
+    '#as': link
+    '#modifier': ~
+    '#disabled': false
+    '#iconOnly': false
+    '#iconStart': ~
+    '#iconEnd': ~
     '#cache':
         contexts: {  }
         tags: {  }
         max-age: -1
+'#image': ~
 '#links': {  }
 '#highlight': false
-'#modifiers':
-    - dark
+'#modifiers': {  }
 '#attributes':
     fixme: {  }
 '#links_title': true

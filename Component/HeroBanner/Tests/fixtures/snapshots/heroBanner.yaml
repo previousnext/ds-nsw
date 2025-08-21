@@ -37,8 +37,7 @@
         max-age: -1
 '#links': {  }
 '#highlight': false
-'#modifiers':
-    - dark
+'#modifiers': {  }
 '#attributes':
     fixme: {  }
 '#links_title': true

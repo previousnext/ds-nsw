@@ -17,7 +17,10 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
   // @todo add bool type after https://github.com/dpi/pinto/issues/39
   new Slots\Slot('links_title'),
 ])]
-#[Scenarios([HeroBannerScenarios::class])]
+#[Scenarios([
+  CommonComponent\HeroBanner\HeroBannerScenarios::class,
+  HeroBannerScenarios::class,
+])]
 class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
@@ -49,7 +52,8 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('link', $this->link)
       ->set('image', $this->image)
       ->set('links_title', TRUE)
-      ->set('links', \array_map(fn (CommonAtom\Link\Link $link) => ($this->link)(), $this->links?->toArray() ?? []))
+      ->set('highlight', $this->highlight)
+      ->set('links', \array_map(static fn (CommonAtom\Link\Link $link) => ($link)(), $this->links?->toArray() ?? []))
       ->set('modifiers', $this->modifiers->getInstancesOf(HeroBannerBackground::class)->map(
         static fn (HeroBannerBackground $modifier): string => $modifier->modifierName(),
       )->toArray())

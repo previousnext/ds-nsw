@@ -14,7 +14,7 @@
         contexts: {  }
         tags: {  }
         max-age: -1
-'#subtitle': Subtitle!
+'#subtitle': ~
 '#link': ~
 '#image':
     '#theme': 15a6a101c2-NswAtoms-Image
@@ -36,9 +36,8 @@
         tags: {  }
         max-age: -1
 '#links': {  }
-'#highlight': false
-'#modifiers':
-    - dark
+'#highlight': true
+'#modifiers': {  }
 '#attributes':
     fixme: {  }
 '#links_title': true
