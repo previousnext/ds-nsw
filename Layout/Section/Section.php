@@ -18,6 +18,10 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
   use Utility\ObjectTrait;
 
   protected function build(Slots\Build $build): Slots\Build {
+    $content = $this->map(static function (CommonLayouts\Section\SectionItem $item): mixed {
+      return \is_callable($item->content) ? ($item->content)() : $item->content;
+    })->toArray();
+
     return $build
       // @todo Common/shapes has `background` but NSW template does not.
       ->set('background', NULL)
@@ -25,7 +29,7 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
       ->set('isContainer', NULL)
       ->set('as', $this->as->element())
       ->set('heading', $this->heading)
-      ->set('content', $this->content?->markup)
+      ->set('content', $content)
       ->set('link', $this->link)
       // @todo do something with modifiers:
       ->set('modifiers', []);
