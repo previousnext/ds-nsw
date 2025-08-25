@@ -2,14 +2,16 @@
 '#attached':
     library:
         - pinto/15a6a101c2-NswAtoms-Button
-'#title': 'Link button'
+'#title': Button
 '#href': ~
 '#as': button
 '#disabled': false
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
-'#modifiers': {  }
+'#modifiers':
+    -
+        name: Destructive
 '#cache':
     contexts: {  }
     tags: {  }
