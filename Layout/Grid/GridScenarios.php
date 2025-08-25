@@ -11,7 +11,6 @@ use PreviousNext\Ds\Common\Component;
 use PreviousNext\Ds\Common\Layout\Grid\Grid;
 use PreviousNext\Ds\Common\Layout\Grid\GridItem;
 use PreviousNext\Ds\Common\Layout\Grid\GridType;
-use PreviousNext\Ds\Mixtape\Layout\Grid\GridColumnSizeModifier;
 use PreviousNext\IdsTools\Scenario\Scenario;
 
 final class GridScenarios {
@@ -22,19 +21,14 @@ final class GridScenarios {
     $url->expects('toString')->andReturn('http://example.com/');
 
     foreach ([
-       [\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::ExtraLarge2, 2],
-       [\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::Large3, 3],
-       [\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::Medium4, 4],
-       [\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::Medium3, 3],
-       [\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::Medium3, 6],
+       [GridColumnSizeModifier::ExtraLarge2, 2],
+       [GridColumnSizeModifier::Large3, 3],
+       [GridColumnSizeModifier::Medium4, 4],
+       [GridColumnSizeModifier::Medium3, 3],
+       [GridColumnSizeModifier::Medium3, 6],
     ] as [$gridColumnSizeModifier, $cardQuantity]) {
       $instance = Grid::create(as:GridType::Div, gridItemDefaultType: GridItem\GridItemType::Div);
-      if (\class_exists(\PreviousNext\Ds\Nsw\Layout\Grid\GridColumnSizeModifier::class)) {
-        $instance->modifiers[] = $gridColumnSizeModifier;
-      }
-      elseif (\class_exists(GridColumnSizeModifier::class)) {
-        $instance->modifiers[] = GridColumnSizeModifier::Medium3;
-      }
+      $instance->modifiers[] = $gridColumnSizeModifier;
 
       for ($i = 0; $i < $cardQuantity; $i++) {
         $instance[] = Component\Card\Card::create(
@@ -49,7 +43,6 @@ final class GridScenarios {
             </p>
             MARKUP)),
           link: Atom\Link\Link::create(title: 'Card Link!', url: $url),
-        // modifiers: [Component\Card\CommonCardModifiers::Modifier1],.
         )();
       }
 
