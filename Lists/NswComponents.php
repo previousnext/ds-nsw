@@ -28,4 +28,10 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\HeroBanner\HeroBanner::class)]
   case HeroBanner;
 
+  #[Definition(Component\Navigation\Navigation::class)]
+  case Navigation;
+
+  #[Definition(Component\SocialLinks\SocialLinks::class)]
+  case SocialLinks;
+
 }

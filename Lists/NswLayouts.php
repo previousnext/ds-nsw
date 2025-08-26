@@ -16,6 +16,9 @@ enum NswLayouts implements ObjectListInterface {
 
   use NswListTrait;
 
+  #[Definition(Layout\Footer\Footer::class)]
+  case Footer;
+
   #[Definition(Layout\Grid\Grid::class)]
   case Grid;
 

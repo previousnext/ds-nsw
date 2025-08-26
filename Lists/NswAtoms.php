@@ -28,4 +28,7 @@ enum NswAtoms implements ObjectListInterface {
   #[Definition(Atom\ExternalVideo\ExternalVideo::class)]
   case Video;
 
+  #[Definition(Atom\LinkedImage\LinkedImage::class)]
+  case LinkedImage;
+
 }
