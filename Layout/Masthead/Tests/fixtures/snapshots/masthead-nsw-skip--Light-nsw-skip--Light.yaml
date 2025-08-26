@@ -1,0 +1,89 @@
+'#theme': 90332a4d51-NswLayouts-Masthead
+'#attached':
+    library:
+        - pinto/90332a4d51-NswLayouts-Masthead
+'#content': {  }
+'#links':
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'First link'
+        '#href': 'https://example.com'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'Second link'
+        '#href': '#'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#background': light
+'#skipLinks':
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'Skip to navigation'
+        '#href': '#'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'Skip to content'
+        '#href': '#'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#attributes':
+    foo: {  }
+    class:
+        - hello
+        - world
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
