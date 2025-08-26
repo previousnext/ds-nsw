@@ -61,7 +61,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':
@@ -155,7 +155,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':
@@ -249,7 +249,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':
@@ -343,7 +343,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':
@@ -437,7 +437,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':
@@ -531,7 +531,7 @@
                     tags: {  }
                     max-age: -1
             '#date': '1 January 2001'
-            '#tags': ''
+            '#tags': ~
             '#title': ~
             '#content': {  }
             '#link':

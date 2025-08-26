@@ -29,9 +29,7 @@ class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterfa
       ->set('heading', $this->heading)
       ->set('content', $this->content?->markup)
       ->set('link', $this->link)
-      ->set('tags', \implode(' ', \array_map(static function ($tag) {
-        return $tag->title;
-      }, $this->tags->toArray())))
+      ->set('tags', $this->tags->count() > 0 ? $this->tags : NULL)
       // @todo template is a bit whack with this.
       ->set('date', $this->date?->format('j F Y'))
       ->set('icon', '🐴');

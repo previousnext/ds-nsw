@@ -9,9 +9,7 @@
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
-'#modifiers':
-    -
-        name: Dark
+'#modifiers': {  }
 '#cache':
     contexts: {  }
     tags: {  }

@@ -9,9 +9,7 @@
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
-'#modifiers':
-    -
-        name: Light
+'#modifiers': {  }
 '#cache':
     contexts: {  }
     tags: {  }

@@ -9,9 +9,7 @@
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
-'#modifiers':
-    -
-        name: Outline
+'#modifiers': {  }
 '#cache':
     contexts: {  }
     tags: {  }

@@ -24,6 +24,8 @@ class Button extends CommonAtom\Button\Button implements Utility\NswObjectInterf
     });
 
     return parent::build($build)
+      // NSW's _class_handler.twig mishandles enums.
+      ->set('modifiers', [])
       ->set('title', $this->title)
       ->set('href', $this->href)
       ->set('as', $as);

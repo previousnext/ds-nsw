@@ -25,8 +25,6 @@ final class CardScenarios {
       ]),
       date: new \DateTimeImmutable('1st January 2001'),
       link: CommonAtom\Link\Link::create('Card Link!', $url),
-      // @todo replace with real modifiers
-      modifiers: [CommonComponent\Card\CommonCardModifiers::Modifier1],
     );
 
     $image->imageAttributes['test'] = 'image-attr';
@@ -47,10 +45,10 @@ final class CardScenarios {
       ]),
       date: new \DateTimeImmutable('1st January 2001'),
       icon: Icon::create(icon: 'Foo'),
-      tags: new CommonAtom\Tag\Tags([
-        CommonAtom\Tag\Tag::create('Foo'),
-        CommonAtom\Tag\Tag::create('Foo'),
-        CommonAtom\Tag\Tag::create('Foo'),
+      tags: CommonComponent\Tags\Tags::create([
+        CommonComponent\Tags\Tag::create('Foo'),
+        CommonComponent\Tags\Tag::create('Foo'),
+        CommonComponent\Tags\Tag::create('Foo'),
       ]),
       heading: CommonAtom\Heading\Heading::create('A Heading!!!', \PreviousNext\Ds\Common\Atom\Heading\HeadingLevel::Two),
       content: CommonAtom\Html\Html::create(Markup::create('<strong>Hello</strong> World!')),
