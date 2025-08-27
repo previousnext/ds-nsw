@@ -19,6 +19,9 @@ enum NswAtoms implements ObjectListInterface {
   #[Definition(Atom\Button\Button::class)]
   case Button;
 
+  #[Definition(Atom\Icon\Icon::class)]
+  case Icon;
+
   #[Definition(Atom\Image\Image::class)]
   case Image;
 

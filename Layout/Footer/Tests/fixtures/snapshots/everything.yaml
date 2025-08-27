@@ -118,7 +118,21 @@
             '#external': false
             '#current': false
             '#download': false
-            '#iconStart': ~
+            '#iconStart':
+                '#theme': 15a6a101c2-NswAtoms-Icon
+                '#attached':
+                    library:
+                        - pinto/15a6a101c2-NswAtoms-Icon
+                '#icon': rocket
+                '#text': ~
+                '#alignmentType': ~
+                '#attributes': {  }
+                '#modifiers': {  }
+                '#size': ~
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
             '#iconEnd': ~
             '#attributes': {  }
             '#cache':
@@ -136,7 +150,21 @@
             '#external': false
             '#current': false
             '#download': false
-            '#iconStart': ~
+            '#iconStart':
+                '#theme': 15a6a101c2-NswAtoms-Icon
+                '#attached':
+                    library:
+                        - pinto/15a6a101c2-NswAtoms-Icon
+                '#icon': keyboard_command_key
+                '#text': ~
+                '#alignmentType': ~
+                '#attributes': {  }
+                '#modifiers': {  }
+                '#size': ~
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
             '#iconEnd': ~
             '#attributes': {  }
             '#cache':
@@ -154,7 +182,21 @@
             '#external': false
             '#current': false
             '#download': false
-            '#iconStart': ~
+            '#iconStart':
+                '#theme': 15a6a101c2-NswAtoms-Icon
+                '#attached':
+                    library:
+                        - pinto/15a6a101c2-NswAtoms-Icon
+                '#icon': star
+                '#text': ~
+                '#alignmentType': ~
+                '#attributes': {  }
+                '#modifiers': {  }
+                '#size': ~
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
             '#iconEnd': ~
             '#attributes': {  }
             '#cache':

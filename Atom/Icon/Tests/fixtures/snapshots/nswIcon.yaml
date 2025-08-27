@@ -1,0 +1,14 @@
+'#theme': 15a6a101c2-NswAtoms-Icon
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-Icon
+'#icon': favorite
+'#text': ~
+'#alignmentType': ~
+'#attributes': {  }
+'#modifiers': {  }
+'#size': ~
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
