@@ -5,21 +5,21 @@ declare(strict_types=1);
 namespace PreviousNext\Ds\Nsw\Layout\Grid\GridItem;
 
 use Pinto\Slots;
-use PreviousNext\Ds\Common\Atom\Html\Html;
 use PreviousNext\Ds\Common\Layout as CommonLayout;
 use PreviousNext\Ds\Nsw\Utility;
 
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Slots\Attribute\RenameSlot(original: 'content', new: 'item')]
 class GridItem extends CommonLayout\Grid\GridItem\GridItem implements Utility\NswObjectInterface {
   use Utility\ObjectTrait;
 
   protected function build(Slots\Build $build): Slots\Build {
-    // @todo handle modifiers...
-    $modifiers = [];
-
+    // @fixme, remove when nswds also has a template update for grid-item.
+    $item = $this->first();
     return parent::build($build)
-      ->set('item', $this->item instanceof Html ? $this->item->markup : $this->item)
-      ->set('modifiers', \array_values($modifiers))
+      ->set('content', \is_callable($item) ? ($item)() : $item)
+      // @todo handle modifiers...
+      ->set('modifiers', [])
       ->set('as', $this->as->element());
   }
 
