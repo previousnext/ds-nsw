@@ -7,7 +7,7 @@ namespace PreviousNext\Ds\Nsw\Lists;
 final class NswLists {
 
   /**
-   * @var class-string<\Pinto\List\ObjectListInterface>
+   * @var array<class-string<\Pinto\List\ObjectListInterface>>
    */
   public const Lists = [
     NswAtoms::class,
