@@ -27,7 +27,7 @@ class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterfa
       ->set('image', $this->image)
       ->set('links', $this->links)
       ->set('heading', $this->heading)
-      ->set('content', $this->content?->markup)
+      ->set('content', $this->content)
       ->set('link', $this->link)
       ->set('tags', $this->tags->count() > 0 ? $this->tags : NULL)
       // @todo template is a bit whack with this.
