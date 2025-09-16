@@ -43,7 +43,11 @@
     ],
     "autoload": {
         "psr-4": {
-            "PreviousNext\\Ds\\Nsw\\": "."
+            "PreviousNext\\Ds\\Nsw\\Atom\\": "Atom",
+            "PreviousNext\\Ds\\Nsw\\Component\\": "Component",
+            "PreviousNext\\Ds\\Nsw\\Layout\\": "Layout",
+            "PreviousNext\\Ds\\Nsw\\Lists\\": "Lists",
+            "PreviousNext\\Ds\\Nsw\\Utility\\": "Utility"
         }
     },
     "autoload-dev": {
