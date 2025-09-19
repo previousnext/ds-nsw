@@ -7,14 +7,14 @@ namespace PreviousNext\Ds\Nsw\Component\Tabs\TabListItem;
 use Drupal\Core\Template\Attribute;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
-use PreviousNext\Ds\Mixtape\Utility;
+use PreviousNext\Ds\Nsw\Utility;
 
 #[Slots\Attribute\ModifySlots(add: [
   new Slots\Slot('active'),
   // @todo move to common
   new Slots\Slot('attributes'),
 ])]
-class TabListItem extends CommonComponent\Tabs\TabListItem\TabListItem implements Utility\MixtapeObjectInterface {
+class TabListItem extends CommonComponent\Tabs\TabListItem\TabListItem implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
 
