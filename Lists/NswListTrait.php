@@ -38,8 +38,16 @@ trait NswListTrait {
       // If the enum name ends with 'Item', just get the non-prefixed
       // 'Item'-less enum.
       // E.g `AccordionItem` resolves to `Accordion`.
+      $name = \substr($this->name, 0, \strlen('Item') * -1);
+
+      // @phpstan-ignore-next-line identical.alwaysFalse
+      if (static::class === NswComponents::class && $name === 'TabList') {
+        $name = 'Tab';
+      }
+
+      // Plurality allows for TabItem -> Tabs.
       /** @var static $enum */
-      $enum = $this::{\substr($this->name, 0, \strlen('Item') * -1)};
+      $enum = \defined($this::class . '::' . $name) ? $this::{$name} : $this::{$name . 's'};
     }
 
     // E.g "Component/Card".

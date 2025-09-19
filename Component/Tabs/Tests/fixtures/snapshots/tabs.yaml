@@ -1,0 +1,125 @@
+'#theme': 80fed84dcc-NswComponents-Tabs
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-Tabs
+'#id': the-id
+'#title':
+    '#theme': c2e75f8655-CommonAtoms-Heading
+    '#attached':
+        library:
+            - pinto/c2e75f8655-CommonAtoms-Heading
+    '#heading': Tabs!
+    '#level': h2
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#listItems':
+    -
+        '#theme': 80fed84dcc-NswComponents-TabListItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabListItem
+        '#id': id
+        '#title': 'Tab 1'
+        '#active': false
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabListItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabListItem
+        '#id': id--2
+        '#title': 'Tab 2'
+        '#active': true
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabListItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabListItem
+        '#id': id--3
+        '#title': 'Tab 3'
+        '#active': false
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabListItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabListItem
+        '#id': id--4
+        '#title': 'Tab 4'
+        '#active': false
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#items':
+    -
+        '#theme': 80fed84dcc-NswComponents-TabItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabItem
+        '#title': 'Tab 1'
+        '#content': 'Tab 1 contents!'
+        '#id': id
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabItem
+        '#title': 'Tab 2'
+        '#content': 'Tab 2 contents!'
+        '#id': id--2
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabItem
+        '#title': 'Tab 3'
+        '#content': 'Tab 3 contents!'
+        '#id': id--3
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-TabItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-TabItem
+        '#title': 'Tab 4'
+        '#content': 'Tab 4 contents!'
+        '#id': id--4
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#attributes':
+    foo: {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

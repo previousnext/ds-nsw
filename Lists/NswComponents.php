@@ -34,4 +34,13 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\SocialLinks\SocialLinks::class)]
   case SocialLinks;
 
+  #[Definition(Component\Tabs\Tabs::class)]
+  case Tabs;
+
+  #[Definition(Component\Tabs\TabListItem\TabListItem::class)]
+  case TabListItem;
+
+  #[Definition(Component\Tabs\TabsItem\TabsItem::class)]
+  case TabItem;
+
 }
