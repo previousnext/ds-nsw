@@ -2,7 +2,7 @@
 '#attached':
     library:
         - pinto/80fed84dcc-NswComponents-SocialLinks
-'#heading':
+'#title':
     '#theme': c2e75f8655-CommonAtoms-Heading
     '#attached':
         library:
