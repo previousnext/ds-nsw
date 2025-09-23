@@ -22,6 +22,9 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\Accordion\AccordionItem\AccordionItem::class)]
   case AccordionItem;
 
+  #[Definition(Component\Breadcrumb\Breadcrumb::class)]
+  case Breadcrumb;
+
   #[Definition(Component\Card\Card::class)]
   case Card;
 
