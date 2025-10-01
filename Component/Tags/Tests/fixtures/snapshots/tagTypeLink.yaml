@@ -1,0 +1,22 @@
+'#theme': 80fed84dcc-NswComponents-Tag
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-Tag
+'#items':
+    -
+        title: 'Tag 1'
+        href: 'http://example.com/'
+    -
+        title: 'Tag 2'
+        href: 'http://example.com/'
+    -
+        title: 'Tag 3'
+        href: 'http://example.com/'
+'#containerAttributes': {  }
+'#type': link
+'#__twigTypeVar': link
+'#attributes': {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

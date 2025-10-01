@@ -53,15 +53,18 @@
         max-age: -1
 '#date': '1 January 2001'
 '#tags':
-    '#theme': 3a0566f2dd-CommonComponents-Tags
+    '#theme': 80fed84dcc-NswComponents-Tag
     '#attached':
         library:
-            - pinto/3a0566f2dd-CommonComponents-Tags
-    '#tags':
+            - pinto/80fed84dcc-NswComponents-Tag
+    '#items':
         - Foo
         - Foo
         - Foo
     '#containerAttributes': {  }
+    '#type': text
+    '#__twigTypeVar': text
+    '#attributes': {  }
     '#cache':
         contexts: {  }
         tags: {  }

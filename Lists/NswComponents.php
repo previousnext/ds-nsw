@@ -15,7 +15,9 @@ use PreviousNext\Ds\Nsw\Component;
 #[DependencyOn(NswGlobal::All)]
 enum NswComponents implements ObjectListInterface {
 
-  use NswListTrait;
+  use NswListTrait {
+    NswListTrait::dsDirectory as public originalDsDirectory;
+  }
 
   #[Definition(Component\Accordion\Accordion::class)]
   case Accordion;
@@ -58,10 +60,21 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\Tabs\Tabs::class)]
   case Tabs;
 
+  #[Definition(Component\Tags\Tags::class)]
+  case Tag;
+
   #[Definition(Component\Tabs\TabListItem\TabListItem::class)]
   case TabListItem;
 
   #[Definition(Component\Tabs\TabsItem\TabsItem::class)]
   case TabItem;
+
+  private function dsDirectory(): string {
+    if ($this === NswComponents::Tag) {
+      return 'Component/Tag';
+    }
+
+    return $this->originalDsDirectory();
+  }
 
 }

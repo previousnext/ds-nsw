@@ -1,0 +1,31 @@
+'#theme': 80fed84dcc-NswComponents-Tag
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-Tag
+'#items':
+    -
+        id: {  }
+        name: foo-checkboxes
+        value: value-0
+        checked: false
+        label: 'Tag 0'
+    -
+        id: {  }
+        name: foo-checkboxes
+        value: value-1
+        checked: true
+        label: 'Tag 1'
+    -
+        id: {  }
+        name: foo-checkboxes
+        value: value-2
+        checked: false
+        label: 'Tag 2'
+'#containerAttributes': {  }
+'#type': checkbox
+'#__twigTypeVar': checkbox
+'#attributes': {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

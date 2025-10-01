@@ -22,15 +22,18 @@
         max-age: -1
 '#image': ~
 '#tags':
-    '#theme': 3a0566f2dd-CommonComponents-Tags
+    '#theme': 80fed84dcc-NswComponents-Tag
     '#attached':
         library:
-            - pinto/3a0566f2dd-CommonComponents-Tags
-    '#tags':
+            - pinto/80fed84dcc-NswComponents-Tag
+    '#items':
         - 'Tag 1'
         - 'Tag 2'
         - 'Tag 3'
     '#containerAttributes': {  }
+    '#type': text
+    '#__twigTypeVar': text
+    '#attributes': {  }
     '#cache':
         contexts: {  }
         tags: {  }
