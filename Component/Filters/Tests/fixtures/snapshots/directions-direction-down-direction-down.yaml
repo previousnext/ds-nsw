@@ -1,0 +1,88 @@
+'#theme': 80fed84dcc-NswComponents-Filters
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-Filters
+'#action': 'http://example.com/test'
+'#actions': {  }
+'#attributes': {  }
+'#collapsible': true
+'#counter': ~
+'#direction': down
+'#instant': ~
+'#items':
+    -
+        '#theme': 80fed84dcc-NswComponents-FilterItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-FilterItem
+        '#fields':
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+        '#shownItems': ~
+        '#collapsible': ~
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-FilterItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-FilterItem
+        '#fields':
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+        '#shownItems': ~
+        '#collapsible': ~
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': 80fed84dcc-NswComponents-FilterItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-FilterItem
+        '#fields':
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+        '#shownItems': ~
+        '#collapsible':
+            title: 'Item three group'
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#sticky': ~
+'#title': 'Hello world'
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

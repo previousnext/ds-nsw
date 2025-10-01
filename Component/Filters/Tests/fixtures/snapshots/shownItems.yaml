@@ -1,0 +1,63 @@
+'#theme': 80fed84dcc-NswComponents-Filters
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-Filters
+'#action': 'http://example.com/test'
+'#actions': {  }
+'#attributes': {  }
+'#collapsible': ~
+'#counter': ~
+'#direction': ~
+'#instant': ~
+'#items':
+    -
+        '#theme': 80fed84dcc-NswComponents-FilterItem
+        '#attached':
+            library:
+                - pinto/80fed84dcc-NswComponents-FilterItem
+        '#fields':
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+            -
+                '#theme': c2e75f8655-CommonAtoms-Html
+                '#attached':
+                    library:
+                        - pinto/c2e75f8655-CommonAtoms-Html
+                '#items':
+                    - {  }
+                '#cache':
+                    contexts: {  }
+                    tags: {  }
+                    max-age: -1
+        '#shownItems': 2
+        '#collapsible': ~
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#sticky': ~
+'#title': 'Hello world'
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

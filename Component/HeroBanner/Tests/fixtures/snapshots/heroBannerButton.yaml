@@ -28,6 +28,7 @@
     '#iconStart': ~
     '#iconEnd': ~
     '#modifiers': {  }
+    '#attributes': {  }
     '#cache':
         contexts: {  }
         tags: {  }

@@ -81,6 +81,7 @@
                     max-age: -1
             '#iconEnd': ~
             '#modifiers': {  }
+            '#attributes': {  }
             '#cache':
                 contexts: {  }
                 tags: {  }
