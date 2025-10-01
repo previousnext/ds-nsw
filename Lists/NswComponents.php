@@ -46,6 +46,12 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\Navigation\Navigation::class)]
   case Navigation;
 
+  #[Definition(Component\Pagination\Pagination::class)]
+  case Pagination;
+
+  #[Definition(Component\Pagination\PaginationItem\PaginationItem::class)]
+  case PaginationItem;
+
   #[Definition(Component\SocialLinks\SocialLinks::class)]
   case SocialLinks;
 
