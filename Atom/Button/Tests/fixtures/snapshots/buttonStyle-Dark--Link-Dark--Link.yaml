@@ -2,15 +2,17 @@
 '#attached':
     library:
         - pinto/15a6a101c2-NswAtoms-Button
-'#title': 'Button button'
+'#title': 'Link in style Dark'
 '#href': ~
-'#as': button
+'#as': link
 '#disabled': false
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
-'#attributes': {  }
+'#attributes':
+    class:
+        - nsw-button--dark
 '#cache':
     contexts: {  }
     tags: {  }

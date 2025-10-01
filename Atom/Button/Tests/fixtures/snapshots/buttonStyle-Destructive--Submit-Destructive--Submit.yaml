@@ -2,15 +2,17 @@
 '#attached':
     library:
         - pinto/15a6a101c2-NswAtoms-Button
-'#title': 'Button button'
+'#title': 'Submit in style Destructive'
 '#href': ~
-'#as': button
+'#as': submit
 '#disabled': false
 '#iconOnly': false
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
-'#attributes': {  }
+'#attributes':
+    class:
+        - nsw-button--danger
 '#cache':
     contexts: {  }
     tags: {  }

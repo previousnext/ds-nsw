@@ -2,9 +2,9 @@
 '#attached':
     library:
         - pinto/15a6a101c2-NswAtoms-Button
-'#title': 'Button button'
+'#title': 'Reset button'
 '#href': ~
-'#as': button
+'#as': reset
 '#disabled': false
 '#iconOnly': false
 '#iconStart': ~

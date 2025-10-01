@@ -25,8 +25,7 @@ final class FiltersScenarios {
         ),
         $reset = Common\Atom\Button\Button::create(
           title: 'Reset!',
-          // @todo Reset option somehow...
-          as: Common\Atom\Button\ButtonType::Input,
+          as: Common\Atom\Button\ButtonType::Reset,
         ),
       ],
     );
@@ -39,7 +38,10 @@ final class FiltersScenarios {
     $instance->containerAttributes['name'] = 'world';
 
     $instance[] = Common\Atom\Html\Html::create(Markup::create('<strong>Item</strong> One!'));
-    $instance[] = Common\Atom\Html\Html::create(Markup::create('<strong>Item</strong> Two!'));
+    $instance[] = $filterItem = Common\Atom\Html\Html::create(Markup::create('<strong>Item</strong> Two!'));
+
+    // Add something that is *resettable* by the reset button.
+    $filterItem[] = Common\Atom\Html\Html::create(Markup::create('<input type="text" />'));
 
     $instance[] = $filterItem = FilterItem::create(title: 'Foo bar');
     $filterItem->title = 'Item three group';

@@ -2,7 +2,7 @@
 '#attached':
     library:
         - pinto/15a6a101c2-NswAtoms-Button
-'#title': 'Button button'
+'#title': 'Button in style Outline'
 '#href': ~
 '#as': button
 '#disabled': false
@@ -10,7 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
-'#attributes': {  }
+'#attributes':
+    class:
+        - nsw-button--dark-outline
 '#cache':
     contexts: {  }
     tags: {  }
