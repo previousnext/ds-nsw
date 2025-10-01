@@ -1,0 +1,100 @@
+'#theme': 90332a4d51-NswLayouts-Header
+'#attached':
+    library:
+        - pinto/90332a4d51-NswLayouts-Header
+'#logo':
+    -
+        '#theme': 15a6a101c2-NswAtoms-LinkedImage
+        '#attached':
+            library:
+                - pinto/15a6a101c2-NswAtoms-LinkedImage
+        '#image':
+            '#theme': 15a6a101c2-NswAtoms-Image
+            '#attached':
+                library:
+                    - pinto/15a6a101c2-NswAtoms-Image
+            '#src': /120-49-256px.jpg
+            '#alt': Sample
+            '#width': 120
+            '#height': 49
+            '#loading': eager
+            '#sources': {  }
+            '#imageAttributes': {  }
+            '#attributes': {  }
+            '#cache':
+                contexts: {  }
+                tags: {  }
+                max-age: -1
+        '#href': 'http://example.com/'
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#title': ~
+'#description': ~
+'#search':
+    '#theme': 3a0566f2dd-CommonComponents-SearchForm
+    '#attached':
+        library:
+            - pinto/3a0566f2dd-CommonComponents-SearchForm
+    '#containerAttributes': {  }
+    '#actionUrl': /search-for-common
+    '#input': Foo
+    '#button':
+        '#theme': 15a6a101c2-NswAtoms-Button
+        '#attached':
+            library:
+                - pinto/15a6a101c2-NswAtoms-Button
+        '#title': Search
+        '#href': ~
+        '#as': submit
+        '#disabled': false
+        '#iconOnly': true
+        '#iconStart':
+            '#theme': 15a6a101c2-NswAtoms-Icon
+            '#attached':
+                library:
+                    - pinto/15a6a101c2-NswAtoms-Icon
+            '#icon': search
+            '#text': ~
+            '#alignmentType': ~
+            '#attributes':
+                class:
+                    - mx-icon--search
+            '#modifiers': {  }
+            '#size': ~
+            '#cache':
+                contexts: {  }
+                tags: {  }
+                max-age: -1
+        '#iconEnd': ~
+        '#modifiers': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#navigation':
+    '#theme': 80fed84dcc-NswComponents-Navigation
+    '#attached':
+        library:
+            - pinto/80fed84dcc-NswComponents-Navigation
+    '#id': id
+    '#title': Navigation
+    '#items': {  }
+    '#type': ~
+    '#__twigTypeVar': __defaultUnusedValue
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#controls': ~
+'#attributes': {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

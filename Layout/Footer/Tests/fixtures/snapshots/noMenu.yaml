@@ -38,6 +38,8 @@
     '#id': id
     '#title': Navigation
     '#items': {  }
+    '#type': ~
+    '#__twigTypeVar': __defaultUnusedValue
     '#cache':
         contexts: {  }
         tags: {  }

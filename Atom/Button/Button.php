@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Atom\Button;
 
+use Pinto\Attribute\Asset\Css;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Atom as CommonAtom;
 use PreviousNext\Ds\Common\Atom\Button\ButtonType;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
+#[Css('button.css', preprocess: TRUE)]
 #[Scenarios([CommonAtom\Button\ButtonScenarios::class])]
 class Button extends CommonAtom\Button\Button implements Utility\NswObjectInterface {
 

@@ -48,6 +48,8 @@
         -
             - {  }
             - {  }
+    '#type': ~
+    '#__twigTypeVar': __defaultUnusedValue
     '#cache':
         contexts: {  }
         tags: {  }

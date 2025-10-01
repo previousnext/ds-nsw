@@ -25,6 +25,9 @@ enum NswLayouts implements ObjectListInterface {
   #[Definition(Layout\Grid\GridItem\GridItem::class)]
   case GridItem;
 
+  #[Definition(Layout\Header\Header::class)]
+  case Header;
+
   #[Definition(Layout\Section\Section::class)]
   case Section;
 
