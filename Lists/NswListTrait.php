@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PreviousNext\Ds\Nsw\Lists;
 
 use PreviousNext\Ds\Common\List\ListTrait;
+use PreviousNext\Ds\Common\Utility\TemplateDirectory;
 use PreviousNext\Ds\Nsw\Utility\Twig;
 
 trait NswListTrait {
@@ -25,6 +26,11 @@ trait NswListTrait {
   }
 
   private function dsDirectory(): string {
+    $customTemplateDirectory = ((new \ReflectionEnumUnitCase($this::class, $this->name))->getAttributes(TemplateDirectory::class)[0] ?? NULL)?->newInstance();
+    if ($customTemplateDirectory !== NULL) {
+      return $customTemplateDirectory->path;
+    }
+
     $enum = $this;
 
     $categoryDirectory = match (\get_class($this)) {

@@ -8,6 +8,7 @@ use Pinto\Attribute\Definition;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
 use Pinto\List\ObjectListInterface;
+use PreviousNext\Ds\Common\Utility\TemplateDirectory;
 use PreviousNext\Ds\Nsw\Component;
 
 #[CanonicalProduct]
@@ -36,6 +37,11 @@ enum NswComponents implements ObjectListInterface {
 
   #[Definition(Component\LinkList\LinkList::class)]
   case LinkList;
+
+  #[Definition(Component\ListItem\ListItem::class)]
+  #[TemplateDirectory('Component/ListItem')]
+  #[DependencyOn(NswLayouts::Section)]
+  case ListItem;
 
   #[Definition(Component\Navigation\Navigation::class)]
   case Navigation;
