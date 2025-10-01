@@ -25,6 +25,9 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\Breadcrumb\Breadcrumb::class)]
   case Breadcrumb;
 
+  #[Definition(Component\Callout\Callout::class)]
+  case Callout;
+
   #[Definition(Component\Card\Card::class)]
   case Card;
 
