@@ -10,6 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
+'#containerAttributes':
+    class:
+        - nsw-button--danger
 '#attributes':
     class:
         - nsw-button--danger

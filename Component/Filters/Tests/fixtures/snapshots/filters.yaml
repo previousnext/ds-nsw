@@ -17,6 +17,9 @@
         '#iconStart': ~
         '#iconEnd': ~
         '#modifiers': {  }
+        '#containerAttributes':
+            class:
+                - nsw-button--dark
         '#attributes':
             class:
                 - nsw-button--dark
@@ -37,6 +40,9 @@
         '#iconStart': ~
         '#iconEnd': ~
         '#modifiers': {  }
+        '#containerAttributes':
+            class:
+                - nsw-button--danger
         '#attributes':
             class:
                 - nsw-button--danger

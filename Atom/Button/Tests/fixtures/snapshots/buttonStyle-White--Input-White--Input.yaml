@@ -10,6 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
+'#containerAttributes':
+    class:
+        - nsw-button--white
 '#attributes':
     class:
         - nsw-button--white

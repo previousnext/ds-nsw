@@ -10,6 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
+'#containerAttributes':
+    class:
+        - nsw-button--dark-outline
 '#attributes':
     class:
         - nsw-button--dark-outline

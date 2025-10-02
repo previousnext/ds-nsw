@@ -10,6 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
+'#containerAttributes':
+    class:
+        - nsw-button--full-width
 '#attributes':
     class:
         - nsw-button--full-width

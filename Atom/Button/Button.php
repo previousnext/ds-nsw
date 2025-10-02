@@ -22,8 +22,6 @@ class Button extends CommonAtom\Button\Button implements Utility\NswObjectInterf
 
   use Utility\ObjectTrait;
 
-  public Attribute $containerAttributes;
-
   protected function build(Slots\Build $build): Slots\Build {
     {
     $as = \strtolower(match ($this->as) {

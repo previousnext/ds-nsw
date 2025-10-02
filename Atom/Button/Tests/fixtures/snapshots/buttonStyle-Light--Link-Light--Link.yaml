@@ -10,6 +10,9 @@
 '#iconStart': ~
 '#iconEnd': ~
 '#modifiers': {  }
+'#containerAttributes':
+    class:
+        - nsw-button--light
 '#attributes':
     class:
         - nsw-button--light
