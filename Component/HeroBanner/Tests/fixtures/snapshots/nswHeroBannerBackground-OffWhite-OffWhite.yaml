@@ -7,7 +7,7 @@
     '#attached':
         library:
             - pinto/c2e75f8655-CommonAtoms-Heading
-    '#heading': 'Hero Link List Title!'
+    '#heading': Title!
     '#level': h1
     '#attributes': {  }
     '#cache':
@@ -20,8 +20,8 @@
     '#attached':
         library:
             - pinto/15a6a101c2-NswAtoms-Button
-    '#title': 'Hero Banner Button!'
-    '#href': 'http://example.com/'
+    '#title': 'Hero Banner Link!'
+    '#href': '#'
     '#as': link
     '#disabled': false
     '#iconOnly': false
@@ -31,9 +31,11 @@
     '#containerAttributes':
         class:
             - nsw-hero-banner__button
+            - nsw-button--dark
     '#attributes':
         class:
             - nsw-hero-banner__button
+            - nsw-button--dark
     '#cache':
         contexts: {  }
         tags: {  }
@@ -41,7 +43,8 @@
 '#image': ~
 '#links': {  }
 '#highlight': false
-'#modifiers': {  }
+'#modifiers':
+    - off-white
 '#attributes':
     fixme: {  }
 '#links_title': true

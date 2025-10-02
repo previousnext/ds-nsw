@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Component\HeroBanner;
 
 use Drupal\Core\Url;
 use PreviousNext\Ds\Common\Atom as CommonAtom;
+use PreviousNext\Ds\Common\Atom\Button\ButtonType;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\IdsTools\Scenario\Scenario;
 
@@ -13,9 +14,6 @@ final class HeroBannerScenarios {
 
   #[Scenario(viewPortWidth: 1000)]
   final public static function nswHeroBanner(): HeroBanner {
-    $url = \Mockery::mock(Url::class);
-    $url->expects('toString')->andReturn('http://example.com/');
-
     /** @var HeroBanner $instance */
     $instance = CommonComponent\HeroBanner\HeroBanner::create(
       'Title!',
@@ -34,7 +32,7 @@ final class HeroBannerScenarios {
     $instance = CommonComponent\HeroBanner\HeroBanner::create(
       'Hero Link List Title!',
       'Hero Link List Subtitle!',
-      link: CommonAtom\Link\Link::create('Hero Banner Link!', $url),
+      link: CommonAtom\Button\Button::create('Hero Banner Link!', href: $url->toString(), as: ButtonType::Link),
       links: CommonComponent\LinkList\LinkList::create([
         CommonAtom\Link\Link::create(title: '', url: $url),
         CommonAtom\Link\Link::create('Front page!', $url),
@@ -43,6 +41,22 @@ final class HeroBannerScenarios {
     );
     $instance->modifiers[] = HeroBannerBackground::Dark;
     return $instance;
+  }
+
+  /**
+   * @phpstan-return \Generator<HeroBanner>
+   */
+  final public static function nswHeroBannerBackground(): \Generator {
+    foreach (HeroBannerBackground::cases() as $background) {
+      /** @var HeroBanner $instance */
+      $instance = CommonComponent\HeroBanner\HeroBanner::create(
+        title: 'Title!',
+        // Button added since button classes vary by the banner background.
+        link: CommonAtom\Button\Button::create('Hero Banner Link!', as: ButtonType::Link, href: '#'),
+      );
+      $instance->modifiers[] = $background;
+      yield $background->name => $instance;
+    }
   }
 
 }

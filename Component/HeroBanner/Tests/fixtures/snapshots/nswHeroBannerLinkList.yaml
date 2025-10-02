@@ -16,19 +16,26 @@
         max-age: -1
 '#subtitle': 'Hero Link List Subtitle!'
 '#link':
-    '#theme': c2e75f8655-CommonAtoms-Link
+    '#theme': 15a6a101c2-NswAtoms-Button
     '#attached':
         library:
-            - pinto/c2e75f8655-CommonAtoms-Link
+            - pinto/15a6a101c2-NswAtoms-Button
     '#title': 'Hero Banner Link!'
     '#href': 'http://example.com/'
-    '#more': false
-    '#external': false
-    '#current': false
-    '#download': false
+    '#as': link
+    '#disabled': false
+    '#iconOnly': false
     '#iconStart': ~
     '#iconEnd': ~
-    '#attributes': {  }
+    '#modifiers': {  }
+    '#containerAttributes':
+        class:
+            - nsw-hero-banner__button
+            - nsw-button--white
+    '#attributes':
+        class:
+            - nsw-hero-banner__button
+            - nsw-button--white
     '#cache':
         contexts: {  }
         tags: {  }

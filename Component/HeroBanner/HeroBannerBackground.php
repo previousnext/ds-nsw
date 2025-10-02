@@ -9,13 +9,21 @@ use PreviousNext\Ds\Common\Modifier\Mutex;
 
 #[Mutex]
 enum HeroBannerBackground implements HeroBannerModifierInterface {
-  case Dark;
-  case White;
 
+  case Dark;
+  case Light;
+  case White;
+  case OffWhite;
+
+  /**
+   * Suffix for `nsw-hero-banner--`.
+   */
   public function modifierName(): string {
     return match ($this) {
       static::Dark => 'dark',
-            static::White => 'white',
+      static::Light => 'light',
+      static::White => 'white',
+      static::OffWhite => 'off-white',
     };
   }
 

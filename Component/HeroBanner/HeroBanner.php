@@ -32,20 +32,27 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
     // Image wrapper needs a hero specific class.
     $this->image?->containerAttributes->addClass(['nsw-hero-banner__image']);
 
-    // phpcs:disable Drupal.Commenting.InlineComment.SpacingBefore
-    // phpcs:disable Drupal.Files.LineLength.TooLong
-    // When the link is a link with label, add classes to the wrapper:
-    // @todo FIX
-    // if ($this->link instanceof Atom\Link\LinkWithLabel) {
-    //   $this->link->aAttributes->addClass(['nsw-hero-banner__button']);
-    //   match ($this->modifiers->getFirstInstanceOf(HeroBannerBackground::class)) {
-    //     // Intentionally do not mix HeroBannerBackground::modifierName() in with
-    //     // button classes.
-    //     HeroBannerBackground::Dark => $this->link->aAttributes->addClass(['nsw-button--dark']),
-    //     HeroBannerBackground::White => $this->link->aAttributes->addClass(['nsw-button--white']),
-    //     default => NULL,
-    //   };
-    // }
+    $modifiers = [];
+    foreach ($this->modifiers->getInstancesOf(HeroBannerBackground::class) as $background) {
+      $modifiers[] = $background->modifierName();
+    }
+
+    // When link is a button, automatically add background modifiers depending on the main banner background.
+    if ($this->link instanceof CommonAtom\Button\Button) {
+      $this->link->containerAttributes->addClass(['nsw-hero-banner__button']);
+
+      // Don't override ButtonStyle if one already exists.
+      if (FALSE === $this->link->modifiers->hasInstanceOf(CommonAtom\Button\ButtonStyle::class)) {
+        match ($this->modifiers->getFirstInstanceOf(HeroBannerBackground::class)) {
+          // Intentionally do not mix HeroBannerBackground::modifierName() in with
+          // button classes.
+          HeroBannerBackground::Dark => $this->link->modifiers->add(CommonAtom\Button\ButtonStyle::White),
+          HeroBannerBackground::White, HeroBannerBackground::Light, HeroBannerBackground::OffWhite => $this->link->modifiers->add(CommonAtom\Button\ButtonStyle::Dark),
+          default => NULL,
+        };
+      }
+    }
+
     return $build
       ->set('title', $this->title)
       ->set('subtitle', $this->subtitle)
@@ -54,9 +61,7 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('links_title', TRUE)
       ->set('highlight', $this->highlight)
       ->set('links', \array_map(static fn (CommonAtom\Link\Link $link) => ($link)(), $this->links?->toArray() ?? []))
-      ->set('modifiers', $this->modifiers->getInstancesOf(HeroBannerBackground::class)->map(
-        static fn (HeroBannerBackground $modifier): string => $modifier->modifierName(),
-      )->toArray())
+      ->set('modifiers', $modifiers)
       ->set('containerAttributes', $this->containerAttributes);
   }
 
