@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Component\Card;
 
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
+use PreviousNext\Ds\Common\Atom\Html\Html;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
@@ -27,7 +28,7 @@ class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterfa
       ->set('image', $this->image)
       ->set('links', $this->links)
       ->set('heading', $this->heading)
-      ->set('content', $this->content)
+      ->set('content', Html::createFromCollection($this))
       ->set('link', $this->link)
       ->set('tags', $this->tags->count() > 0 ? $this->tags : NULL)
       // @todo template is a bit whack with this.
