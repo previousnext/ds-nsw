@@ -92,7 +92,6 @@
     foo: {  }
     class:
         - hello
-        - world
 '#cache':
     contexts: {  }
     tags: {  }

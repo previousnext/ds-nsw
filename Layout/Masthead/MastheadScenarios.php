@@ -37,7 +37,6 @@ final class MastheadScenarios {
     );
     $instance->containerAttributes['foo'] = 'bar';
     $instance->containerAttributes['class'][] = 'hello';
-    $instance->containerAttributes['class'][] = 'world';
 
     foreach (MastheadBackground::cases() as $background) {
       $i = clone $instance;
