@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
+use Drupal\pinto\Resource\DrupalLibraryInterface;
 use Pinto\Attribute\Asset;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
 use Pinto\List\ObjectListInterface;
 
 #[CanonicalProduct]
-enum NswGlobal implements ObjectListInterface {
+enum NswGlobal implements ObjectListInterface, DrupalLibraryInterface {
 
   use NswListTrait;
 
