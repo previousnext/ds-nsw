@@ -7,6 +7,7 @@ namespace PreviousNext\Ds\Nsw\Component\HeroBanner;
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Atom as CommonAtom;
+use PreviousNext\Ds\Common\Atom\Html\Html;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
@@ -55,6 +56,7 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
 
     return $build
       ->set('title', $this->title)
+      ->set('content', Html::createFromCollection($this))
       ->set('subtitle', $this->subtitle)
       ->set('link', $this->link)
       ->set('image', $this->image)
