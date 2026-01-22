@@ -1,0 +1,23 @@
+'#theme': 80fed84dcc-NswComponents-SideNavigation
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-SideNavigation
+'#id': sample-id
+'#title': Title!
+'#items':
+    -
+        -
+            - {  }
+        -
+            - {  }
+            - {  }
+            - {  }
+        - {  }
+    -
+        - {  }
+    - {  }
+'#parent': ~
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
