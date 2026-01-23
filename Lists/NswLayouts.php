@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
-use Drupal\pinto\Resource\DrupalLibraryInterface;
 use Pinto\Attribute\Definition;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
@@ -13,7 +12,7 @@ use PreviousNext\Ds\Nsw\Layout;
 
 #[CanonicalProduct]
 #[DependencyOn(NswGlobal::All)]
-enum NswLayouts implements ObjectListInterface, DrupalLibraryInterface {
+enum NswLayouts implements ObjectListInterface {
 
   use NswListTrait;
 

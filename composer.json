@@ -1,7 +1,6 @@
 {
     "name": "previousnext/ds-nsw",
     "type": "library",
-    "version": "0.0.1",
     "minimum-stability": "beta",
     "require": {
         "php": ">=8.2",
@@ -9,7 +8,7 @@
     },
     "require-dev": {
         "brianium/paratest": "^7.8",
-        "drupal/pinto": "^0.7.0@beta",
+        "drupal/pinto": "0.5.1",
         "drupal/pinto_block": "0.2.0",
         "mglaman/phpstan-drupal": "^2.0",
         "mockery/mockery": "^1.6.12",

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PreviousNext\Ds\Nsw\Lists;
 
-use Drupal\pinto\Resource\DrupalLibraryInterface;
 use Pinto\Attribute\Definition;
 use Pinto\Attribute\DependencyOn;
 use Pinto\CanonicalProduct\Attribute\CanonicalProduct;
@@ -14,7 +13,7 @@ use PreviousNext\Ds\Nsw\Component;
 
 #[CanonicalProduct]
 #[DependencyOn(NswGlobal::All)]
-enum NswComponents implements ObjectListInterface, DrupalLibraryInterface {
+enum NswComponents implements ObjectListInterface {
 
   use NswListTrait {
     NswListTrait::dsDirectory as public originalDsDirectory;
@@ -75,6 +74,9 @@ enum NswComponents implements ObjectListInterface, DrupalLibraryInterface {
 
   #[Definition(Component\Tabs\TabsItem\TabsItem::class)]
   case TabItem;
+
+  #[Definition(Component\SideNavigation\SideNavigation::class)]
+  case SideNavigation;
 
   private function dsDirectory(): string {
     if ($this === NswComponents::Tag) {
