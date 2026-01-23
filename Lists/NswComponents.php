@@ -75,6 +75,9 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\Tabs\TabsItem\TabsItem::class)]
   case TabItem;
 
+  #[Definition(Component\SideNavigation\SideNavigation::class)]
+  case SideNavigation;
+
   private function dsDirectory(): string {
     if ($this === NswComponents::Tag) {
       return 'Component/Tag';
