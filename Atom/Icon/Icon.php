@@ -15,12 +15,12 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
  * Icon name ($icon) is https://fonts.google.com/icons?icon.set=Material+Icons.
  */
 #[Css('icon.css', preprocess: TRUE)]
+#[ExternalCss('//fonts.googleapis.com/icon?family=Material+Icons')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\ModifySlots(add: [
   'size',
 ])]
 #[Scenarios([IconScenarios::class])]
-#[ExternalCss('//fonts.googleapis.com/icon?family=Material+Icons')]
 class Icon extends CommonAtom\Icon\Icon implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
