@@ -29,7 +29,7 @@ class Image extends CommonComponent\Media\Image\Image implements Utility\NswObje
       ->set('loadingType', \strtolower($this->loadingType->name))
       ->set('sources', \array_map(static function (ImageSource $source): array {
         // @todo
-        return ['srcset' => '', 'type' => '', '?media' => NULL];
+        return ['srcset' => $source->srcset, 'type' => $source->type, 'media' => $source->media];
       }, $this->sources));
   }
 
