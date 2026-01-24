@@ -1,0 +1,51 @@
+'#theme': 80fed84dcc-NswComponents-SearchForm
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-SearchForm
+'#attributes': {  }
+'#action': 'http://example.com/search'
+'#input':
+    charset: utf8
+'#button':
+    '#theme': 15a6a101c2-NswAtoms-Button
+    '#attached':
+        library:
+            - pinto/15a6a101c2-NswAtoms-Button
+    '#title': Search
+    '#href': ~
+    '#as': submit
+    '#disabled': false
+    '#iconOnly': true
+    '#iconStart':
+        '#theme': 15a6a101c2-NswAtoms-Icon
+        '#attached':
+            library:
+                - pinto/15a6a101c2-NswAtoms-Icon
+        '#icon': search
+        '#text': ~
+        '#alignmentType': ~
+        '#attributes':
+            class:
+                - nsw-material-icons
+        '#modifiers': {  }
+        '#size': ~
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    '#iconEnd': ~
+    '#modifiers': {  }
+    '#containerAttributes':
+        class:
+            - nsw-button--dark
+    '#attributes':
+        class:
+            - nsw-button--dark
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

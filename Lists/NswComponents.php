@@ -45,6 +45,9 @@ enum NswComponents implements ObjectListInterface {
   #[Definition(Component\HeroBanner\HeroBanner::class)]
   case HeroBanner;
 
+  #[Definition(Component\HeroSearch\HeroSearch::class)]
+  case HeroSearch;
+
   #[Definition(Component\LinkList\LinkList::class)]
   case LinkList;
 
@@ -76,6 +79,10 @@ enum NswComponents implements ObjectListInterface {
 
   #[Definition(Component\Tabs\TabsItem\TabsItem::class)]
   case TabItem;
+
+  #[Definition(Component\SearchForm\SearchForm::class)]
+  #[TemplateDirectory('Form/Search')]
+  case SearchForm;
 
   #[Definition(Component\SideNavigation\SideNavigation::class)]
   case SideNavigation;
