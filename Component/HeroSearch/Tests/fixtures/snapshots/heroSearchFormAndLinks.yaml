@@ -1,0 +1,132 @@
+'#theme': 80fed84dcc-NswComponents-HeroSearch
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-HeroSearch
+'#title':
+    '#theme': c2e75f8655-CommonAtoms-Heading
+    '#attached':
+        library:
+            - pinto/c2e75f8655-CommonAtoms-Heading
+    '#heading': 'Hero Link List Title!'
+    '#level': h1
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#subtitle': 'Hero Link List Subtitle!'
+'#image': ~
+'#links':
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'A link'
+        '#href': 'http://example.com/'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'Front page!'
+        '#href': 'http://example.com/'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    -
+        '#theme': c2e75f8655-CommonAtoms-Link
+        '#attached':
+            library:
+                - pinto/c2e75f8655-CommonAtoms-Link
+        '#title': 'Hero Link List item 2!'
+        '#href': 'http://example.com/'
+        '#more': false
+        '#external': false
+        '#current': false
+        '#download': false
+        '#iconStart': ~
+        '#iconEnd': ~
+        '#attributes': {  }
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+'#search':
+    '#theme': 80fed84dcc-NswComponents-SearchForm
+    '#attached':
+        library:
+            - pinto/80fed84dcc-NswComponents-SearchForm
+    '#attributes': {  }
+    '#action': 'https://example.com/search'
+    '#input':
+        charset: utf8
+    '#button':
+        '#theme': 15a6a101c2-NswAtoms-Button
+        '#attached':
+            library:
+                - pinto/15a6a101c2-NswAtoms-Button
+        '#title': Search
+        '#href': ~
+        '#as': submit
+        '#disabled': false
+        '#iconOnly': true
+        '#iconStart':
+            '#theme': 15a6a101c2-NswAtoms-Icon
+            '#attached':
+                library:
+                    - pinto/15a6a101c2-NswAtoms-Icon
+            '#icon': search
+            '#text': ~
+            '#alignmentType': ~
+            '#attributes':
+                class:
+                    - nsw-material-icons
+            '#modifiers': {  }
+            '#size': ~
+            '#cache':
+                contexts: {  }
+                tags: {  }
+                max-age: -1
+        '#iconEnd': ~
+        '#modifiers': {  }
+        '#containerAttributes':
+            class:
+                - nsw-button--dark
+        '#attributes':
+            class:
+                - nsw-button--dark
+        '#cache':
+            contexts: {  }
+            tags: {  }
+            max-age: -1
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#modifiers': {  }
+'#attributes':
+    fixme: {  }
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
