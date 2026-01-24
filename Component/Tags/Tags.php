@@ -58,7 +58,11 @@ class Tags extends CommonComponent\Tags\Tags implements Utility\NswObjectInterfa
       // Same type for all items, maybe it should be per tag?
       // Cant pass this as '#type' is reserved in Drupal.
       // When running outside of Drupal, type should be set as preprocessor won't work.
-      ->set('type', \class_exists(\Drupal\pnx_ds_nsw\Hook\Hooks::class) ? NULL : $this->tagType->typeName())
+      
+      // Following is commented because Drupal 10.6 is not able to use Hook attributes.
+      // Hence, class is found however since hook isn't found it returns null.
+      // ->set('type', \class_exists(\Drupal\pnx_ds_nsw\Hook\Hooks::class) ? NULL : $this->tagType->typeName())
+      ->set('type', $this->tagType->typeName())
       ->set('__twigTypeVar', $this->tagType->typeName());
   }
 
