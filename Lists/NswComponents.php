@@ -26,6 +26,7 @@ enum NswComponents implements ObjectListInterface {
   case AccordionItem;
 
   #[Definition(Component\Breadcrumb\Breadcrumb::class)]
+  #[DependencyOn(NswAtoms::Icon)]
   case Breadcrumb;
 
   #[Definition(Component\Callout\Callout::class)]
@@ -35,6 +36,7 @@ enum NswComponents implements ObjectListInterface {
   case Card;
 
   #[Definition(Component\Filters\Filters::class)]
+  #[DependencyOn(NswAtoms::Icon)]
   case Filters;
 
   #[Definition(Component\Filters\FilterItem\FilterItem::class)]

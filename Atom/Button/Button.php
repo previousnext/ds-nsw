@@ -14,7 +14,6 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Css('button.css', preprocess: TRUE)]
 #[Scenarios([CommonAtom\Button\ButtonScenarios::class])]
-#[Css('button.css')]
 #[Slots\Attribute\ModifySlots(add: [
   'attributes',
 ])]

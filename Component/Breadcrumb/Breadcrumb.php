@@ -10,7 +10,6 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Css('navigation.css', preprocess: TRUE)]
 #[Css('breadcrumb.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\RenameSlot(original: 'links', new: 'items')]

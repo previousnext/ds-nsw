@@ -12,7 +12,6 @@ use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('grid.css', preprocess: TRUE)]
-#[Asset\Css('grid2.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Scenarios([
   CommonLayout\Grid\GridScenarios::class,

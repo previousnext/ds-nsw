@@ -21,7 +21,6 @@ use Ramsey\Collection\CollectionInterface;
  * @extends \Ramsey\Collection\AbstractCollection<FilterItem\FilterItem>
  */
 #[Asset\Css('filters.css', preprocess: TRUE)]
-#[Asset\Css('filters2.css', preprocess: TRUE)]
 #[Asset\Js('filters.entry.js', preprocess: TRUE, attributes: ['type' => 'module'])]
 #[Scenarios([FiltersScenarios::class])]
 #[ObjectType\Slots(slots: [
