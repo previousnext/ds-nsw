@@ -33,11 +33,13 @@ final class HeroBannerScenarios {
       'Hero Link List Title!',
       'Hero Link List Subtitle!',
       link: CommonAtom\Button\Button::create('Hero Banner Link!', href: $url->toString(), as: ButtonType::Link),
-      links: CommonComponent\LinkList\LinkList::create([
-        CommonAtom\Link\Link::create(title: '', url: $url),
-        CommonAtom\Link\Link::create('Front page!', $url),
-        CommonAtom\Link\Link::create('Hero Link List item 2!', $url),
-      ]),
+      links: CommonComponent\LinkList\LinkList::create(
+        links: [
+          CommonAtom\Link\Link::create('Front page!', $url),
+          CommonAtom\Link\Link::create('Hero Link List item 2!', $url),
+        ],
+        title: CommonAtom\Heading\Heading::create('Popular links', CommonAtom\Heading\HeadingLevel::Six),
+      ),
     );
     $instance->modifiers[] = HeroBannerBackground::Dark;
     return $instance;

@@ -14,6 +14,7 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('hero-banner.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Slots\Attribute\RenameSlot(original: 'links', new: 'linkList')]
 #[Slots\Attribute\ModifySlots(add: [
   // @todo add bool type after https://github.com/dpi/pinto/issues/39
   new Slots\Slot('links_title'),
@@ -60,9 +61,16 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('subtitle', $this->subtitle)
       ->set('link', $this->link)
       ->set('image', $this->image)
-      ->set('links_title', TRUE)
+      ->set('links_title', $this->links?->title->heading ?? NULL)
       ->set('highlight', $this->highlight)
-      ->set('links', \array_map(static fn (CommonAtom\Link\Link $link) => ($link)(), $this->links?->toArray() ?? []))
+      ->set('links', ($this->links !== NULL && $this->links->count() > 0)
+        ? (static function (CommonComponent\LinkList\LinkList $linkList): CommonComponent\LinkList\LinkList {
+          // The heading was used in links_title above.
+          $linkList->title = NULL;
+          return $linkList;
+        })($this->links)
+        : NULL,
+      )
       ->set('modifiers', $modifiers)
       ->set('containerAttributes', $this->containerAttributes)
       ->set('links_title', $this->links_title);

@@ -51,13 +51,13 @@
         tags: {  }
         max-age: -1
 '#image': ~
-'#links': {  }
+'#linkList': ~
 '#highlight': false
 '#modifiers':
     - dark
 '#attributes':
     fixme: {  }
-'#links_title': true
+'#links_title': ~
 '#cache':
     contexts: {  }
     tags: {  }

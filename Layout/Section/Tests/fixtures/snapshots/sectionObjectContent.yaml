@@ -41,6 +41,7 @@
                         '#attached':
                             library:
                                 - pinto/80fed84dcc-NswComponents-LinkList
+                        '#title': ~
                         '#items': {  }
                         '#modifier': ~
                         '#attributes':
