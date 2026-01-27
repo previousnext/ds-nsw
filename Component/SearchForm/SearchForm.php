@@ -39,7 +39,7 @@ class SearchForm extends CommonComponent\SearchForm\SearchForm implements Utilit
       ->set('input', new Markup(<<<HTML
         <input class="nsw-form__input"
           id="search-keyword"
-          name="nsw-hero-input"
+          name="{$this->name}"
           type="text"
           autocomplete="off"
           aria-label="Search by keywords"
