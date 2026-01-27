@@ -51,67 +51,62 @@
         tags: {  }
         max-age: -1
 '#image': ~
-'#links':
-    -
-        '#theme': c2e75f8655-CommonAtoms-Link
-        '#attached':
-            library:
-                - pinto/c2e75f8655-CommonAtoms-Link
-        '#title': ''
-        '#href': 'http://example.com/'
-        '#more': false
-        '#external': false
-        '#current': false
-        '#download': false
-        '#iconStart': ~
-        '#iconEnd': ~
-        '#attributes': {  }
-        '#cache':
-            contexts: {  }
-            tags: {  }
-            max-age: -1
-    -
-        '#theme': c2e75f8655-CommonAtoms-Link
-        '#attached':
-            library:
-                - pinto/c2e75f8655-CommonAtoms-Link
-        '#title': 'Front page!'
-        '#href': 'http://example.com/'
-        '#more': false
-        '#external': false
-        '#current': false
-        '#download': false
-        '#iconStart': ~
-        '#iconEnd': ~
-        '#attributes': {  }
-        '#cache':
-            contexts: {  }
-            tags: {  }
-            max-age: -1
-    -
-        '#theme': c2e75f8655-CommonAtoms-Link
-        '#attached':
-            library:
-                - pinto/c2e75f8655-CommonAtoms-Link
-        '#title': 'Hero Link List item 2!'
-        '#href': 'http://example.com/'
-        '#more': false
-        '#external': false
-        '#current': false
-        '#download': false
-        '#iconStart': ~
-        '#iconEnd': ~
-        '#attributes': {  }
-        '#cache':
-            contexts: {  }
-            tags: {  }
-            max-age: -1
+'#linkList':
+    '#theme': 80fed84dcc-NswComponents-LinkList
+    '#attached':
+        library:
+            - pinto/80fed84dcc-NswComponents-LinkList
+    '#title': ~
+    '#items':
+        -
+            '#theme': c2e75f8655-CommonAtoms-Link
+            '#attached':
+                library:
+                    - pinto/c2e75f8655-CommonAtoms-Link
+            '#title': 'Front page!'
+            '#href': 'http://example.com/'
+            '#more': false
+            '#external': false
+            '#current': false
+            '#download': false
+            '#iconStart': ~
+            '#iconEnd': ~
+            '#attributes': {  }
+            '#cache':
+                contexts: {  }
+                tags: {  }
+                max-age: -1
+        -
+            '#theme': c2e75f8655-CommonAtoms-Link
+            '#attached':
+                library:
+                    - pinto/c2e75f8655-CommonAtoms-Link
+            '#title': 'Hero Link List item 2!'
+            '#href': 'http://example.com/'
+            '#more': false
+            '#external': false
+            '#current': false
+            '#download': false
+            '#iconStart': ~
+            '#iconEnd': ~
+            '#attributes': {  }
+            '#cache':
+                contexts: {  }
+                tags: {  }
+                max-age: -1
+    '#modifier': ~
+    '#attributes':
+        fixme: {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
 '#highlight': false
 '#modifiers':
     - dark
 '#attributes':
     fixme: {  }
-'#links_title': true
+'#links_title': 'Popular links'
 '#cache':
     contexts: {  }
     tags: {  }
