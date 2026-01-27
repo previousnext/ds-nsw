@@ -36,6 +36,7 @@ class SearchForm extends CommonComponent\SearchForm\SearchForm implements Utilit
       ->set('button', $button)
       ->set('containerAttributes', $this->containerAttributes)
       ->set('actionUrl', $this->actionUrl)
+      ->set('name', $this->name)
       ->set('input', new Markup(<<<HTML
         <input class="nsw-form__input"
           id="search-keyword"
