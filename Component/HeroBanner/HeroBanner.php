@@ -64,7 +64,8 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
       ->set('highlight', $this->highlight)
       ->set('links', \array_map(static fn (CommonAtom\Link\Link $link) => ($link)(), $this->links?->toArray() ?? []))
       ->set('modifiers', $modifiers)
-      ->set('containerAttributes', $this->containerAttributes);
+      ->set('containerAttributes', $this->containerAttributes)
+      ->set('links_title', $this->links_title);
   }
 
 }
