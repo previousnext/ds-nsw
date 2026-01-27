@@ -72,8 +72,7 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
         : NULL,
       )
       ->set('modifiers', $modifiers)
-      ->set('containerAttributes', $this->containerAttributes)
-      ->set('links_title', $this->links_title);
+      ->set('containerAttributes', $this->containerAttributes);
   }
 
 }
