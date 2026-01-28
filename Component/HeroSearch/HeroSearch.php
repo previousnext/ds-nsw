@@ -15,6 +15,7 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('hero-search.css', preprocess: TRUE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Slots\Attribute\RenameSlot(original: 'links', new: 'linkList')]
 #[Scenarios([
   CommonComponent\HeroSearch\HeroSearchScenarios::class,
   HeroSearchScenarios::class,
