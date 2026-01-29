@@ -19,6 +19,7 @@ enum NswGlobal implements ObjectListInterface {
   #[Css('link.css', preprocess: TRUE)]
   #[Css('form.css', preprocess: TRUE)]
   #[Css('media.css', preprocess: TRUE)]
+  #[Css('table.css', preprocess: TRUE)]
   case Global;
 
 }
