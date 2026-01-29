@@ -11,7 +11,7 @@ use Pinto\List\ObjectListInterface;
 use PreviousNext\Ds\Nsw\Atom;
 
 #[CanonicalProduct]
-#[DependencyOn(NswGlobal::All)]
+#[DependencyOn(NswGlobal::Global)]
 enum NswAtoms implements ObjectListInterface {
 
   use NswListTrait;

@@ -10,7 +10,7 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Css('breadcrumb.css', preprocess: TRUE)]
+#[Css('breadcrumb.css', preprocess: FALSE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\RenameSlot(original: 'links', new: 'items')]
 #[Scenarios([CommonComponent\Breadcrumb\BreadcrumbScenarios::class])]

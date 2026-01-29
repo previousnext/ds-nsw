@@ -9,7 +9,7 @@ use PreviousNext\Ds\Common\Component as CommonComponents;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Css('pagination.css', preprocess: TRUE)]
+#[Css('pagination.css', preprocess: FALSE)]
 #[Scenarios([PaginationScenarios::class])]
 class Pagination extends CommonComponents\Pagination\Pagination implements Utility\NswObjectInterface {
 

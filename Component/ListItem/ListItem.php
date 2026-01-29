@@ -11,7 +11,7 @@ use PreviousNext\Ds\Common\Component\ListItem\InfoPosition;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Asset\Css('list-item.css', preprocess: TRUE)]
+#[Asset\Css('list-item.css', preprocess: FALSE)]
 #[Scenarios([CommonComponent\ListItem\ListItemScenarios::class])]
 #[Slots\Attribute\ModifySlots(add: [
   new Slots\Slot('modifiers'),

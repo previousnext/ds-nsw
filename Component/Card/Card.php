@@ -13,7 +13,7 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Slots\Attribute\RenameSlot(original: 'heading', new: 'title')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
-#[Asset\Css('card.css', preprocess: TRUE)]
+#[Asset\Css('card.css', preprocess: FALSE)]
 #[Scenarios([CardScenarios::class])]
 class Card extends CommonComponent\Card\Card implements Utility\NswObjectInterface {
 

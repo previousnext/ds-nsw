@@ -10,8 +10,8 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Asset\Css('tabs.css', preprocess: TRUE)]
-#[Asset\Js('tabs.entry.js', preprocess: TRUE, attributes: ['type' => 'module'])]
+#[Asset\Css('tabs.css', preprocess: FALSE)]
+#[Asset\Js('tabs.entry.js', preprocess: FALSE, attributes: ['type' => 'module'])]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Scenarios([CommonComponent\Tabs\TabsScenarios::class])]
 class Tabs extends CommonComponent\Tabs\Tabs implements Utility\NswObjectInterface {
