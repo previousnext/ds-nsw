@@ -1,0 +1,12 @@
+'#theme': 80fed84dcc-NswComponents-SearchForm
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-SearchForm
+'#attributes': {  }
+'#action': 'http://example.com/search'
+'#id': id
+'#name': q
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1

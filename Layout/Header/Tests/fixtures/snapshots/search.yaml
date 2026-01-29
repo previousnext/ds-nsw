@@ -34,48 +34,14 @@
 '#title': ~
 '#description': ~
 '#search':
-    '#theme': 3a0566f2dd-CommonComponents-SearchForm
+    '#theme': 80fed84dcc-NswComponents-SearchForm
     '#attached':
         library:
-            - pinto/3a0566f2dd-CommonComponents-SearchForm
-    '#containerAttributes': {  }
-    '#actionUrl': /search-for-common
-    '#input': Foo
-    '#button':
-        '#theme': 15a6a101c2-NswAtoms-Button
-        '#attached':
-            library:
-                - pinto/15a6a101c2-NswAtoms-Button
-        '#title': Search
-        '#href': ~
-        '#as': submit
-        '#disabled': false
-        '#iconOnly': true
-        '#iconStart':
-            '#theme': 15a6a101c2-NswAtoms-Icon
-            '#attached':
-                library:
-                    - pinto/15a6a101c2-NswAtoms-Icon
-            '#icon': search
-            '#text': ~
-            '#alignmentType': ~
-            '#attributes':
-                class:
-                    - mx-icon--search
-            '#modifiers': {  }
-            '#size': ~
-            '#cache':
-                contexts: {  }
-                tags: {  }
-                max-age: -1
-        '#iconEnd': ~
-        '#modifiers': {  }
-        '#containerAttributes': {  }
-        '#attributes': {  }
-        '#cache':
-            contexts: {  }
-            tags: {  }
-            max-age: -1
+            - pinto/80fed84dcc-NswComponents-SearchForm
+    '#attributes': {  }
+    '#action': /search-for-common
+    '#id': id
+    '#name': q
     '#cache':
         contexts: {  }
         tags: {  }

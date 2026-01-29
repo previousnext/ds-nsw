@@ -1,0 +1,29 @@
+'#theme': 80fed84dcc-NswComponents-HeroSearch
+'#attached':
+    library:
+        - pinto/80fed84dcc-NswComponents-HeroSearch
+'#title':
+    '#theme': c2e75f8655-CommonAtoms-Heading
+    '#attached':
+        library:
+            - pinto/c2e75f8655-CommonAtoms-Heading
+    '#heading': 'Hero Link List Title!'
+    '#level': h1
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#content': ~
+'#subtitle': 'Hero Link List Subtitle!'
+'#image': ~
+'#linkList': ~
+'#search': ~
+'#modifiers': {  }
+'#attributes':
+    fixme:
+        value: fixme
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
