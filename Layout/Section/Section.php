@@ -15,6 +15,9 @@ use PreviousNext\IdsTools\Scenario\Scenarios;
 #[Slots\Attribute\RenameSlot(original: 'heading', new: 'title')]
 #[Slots\Attribute\RenameSlot(original: 'isContainer', new: 'container')]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Slots\Attribute\ModifySlots(add: [
+  new Slots\Slot('linkBefore'),
+])]
 #[Scenarios([
   CommonLayouts\Section\SectionScenarios::class,
   SectionScenarios::class,
@@ -28,6 +31,11 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
       return Html::createFromCollection([$item->content]);
     })->toArray();
 
+    $linkIsBefore = ($this->modifiers->getFirstInstanceOf(LinkPosition::class) ?? LinkPosition::BeforeContent) === LinkPosition::BeforeContent;
+    if ($linkIsBefore) {
+      $this->heading?->containerAttributes->addClass('nsw-section-title');
+    }
+
     return $build
       ->set('background', $this->modifiers->getFirstInstanceOf(SectionBackground::class)?->modifierName())
       ->set('isContainer', $this->isContainer)
@@ -35,6 +43,7 @@ class Section extends CommonLayouts\Section\Section implements Utility\NswObject
       ->set('heading', $this->heading)
       ->set('content', Html::createFromCollection($content))
       ->set('link', $this->link)
+      ->set('linkBefore', $linkIsBefore)
       ->set('modifiers', []);
   }
 

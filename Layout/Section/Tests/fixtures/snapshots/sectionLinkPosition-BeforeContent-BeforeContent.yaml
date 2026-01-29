@@ -2,7 +2,7 @@
 '#attached':
     library:
         - pinto/90332a4d51-NswLayouts-Section
-'#background': off-white
+'#background': ~
 '#container': true
 '#as': section
 '#title':
@@ -50,7 +50,24 @@
         contexts: {  }
         tags: {  }
         max-age: -1
-'#link': ~
+'#link':
+    '#theme': c2e75f8655-CommonAtoms-Link
+    '#attached':
+        library:
+            - pinto/c2e75f8655-CommonAtoms-Link
+    '#title': 'Section link'
+    '#href': 'http://example.com/'
+    '#more': false
+    '#external': false
+    '#current': false
+    '#download': false
+    '#iconStart': ~
+    '#iconEnd': ~
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
 '#modifiers': {  }
 '#attributes': {  }
 '#linkBefore': true
