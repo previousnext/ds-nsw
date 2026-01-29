@@ -13,7 +13,7 @@ use PreviousNext\Ds\Common\Modifier;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Asset\Css('hero-search.css', preprocess: TRUE)]
+#[Asset\Css('hero-search.css', preprocess: FALSE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\RenameSlot(original: 'links', new: 'linkList')]
 #[Scenarios([
@@ -27,9 +27,6 @@ class HeroSearch extends CommonComponent\HeroSearch\HeroSearch implements Utilit
   protected function build(Slots\Build $build): Slots\Build {
     // @fixme workaround scoping bug with `_class_handler.twig`
     $this->containerAttributes['fixme'] = 'fixme';
-
-    // Image wrapper needs a hero specific class.
-    $this->image?->containerAttributes->addClass(['nsw-section--image-html']);
 
     return $build
       ->set('title', $this->title)
