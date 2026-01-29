@@ -51,10 +51,12 @@
             tags: {  }
             max-age: -1
 '#attributes':
-    hello: {  }
+    hello:
+        value: world
     class:
         - foo
-    name: {  }
+    name:
+        value: world
 '#collapsible': ~
 '#counter': true
 '#direction': ~

@@ -14,9 +14,11 @@
     '#loading': eager
     '#sources': {  }
     '#imageAttributes':
-        test: {  }
+        test:
+            value: image-attr
     '#attributes':
-        test: {  }
+        test:
+            value: container-attr
     '#cache':
         contexts: {  }
         tags: {  }
@@ -49,7 +51,8 @@
                 max-age: -1
     '#modifier': ~
     '#attributes':
-        fixme: {  }
+        fixme:
+            value: fixme
     '#cache':
         contexts: {  }
         tags: {  }
@@ -87,7 +90,8 @@
         max-age: -1
 '#modifiers': {  }
 '#attributes':
-    fixme: {  }
+    fixme:
+        value: fixme
 '#cache':
     contexts: {  }
     tags: {  }

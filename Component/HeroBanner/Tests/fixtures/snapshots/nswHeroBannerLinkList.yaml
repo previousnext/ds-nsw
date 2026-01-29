@@ -96,7 +96,8 @@
                 max-age: -1
     '#modifier': ~
     '#attributes':
-        fixme: {  }
+        fixme:
+            value: fixme
     '#cache':
         contexts: {  }
         tags: {  }
@@ -105,7 +106,8 @@
 '#modifiers':
     - dark
 '#attributes':
-    fixme: {  }
+    fixme:
+        value: fixme
 '#links_title': 'Popular links'
 '#cache':
     contexts: {  }

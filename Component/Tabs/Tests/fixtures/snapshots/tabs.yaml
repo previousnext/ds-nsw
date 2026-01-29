@@ -158,7 +158,8 @@
             tags: {  }
             max-age: -1
 '#attributes':
-    foo: {  }
+    foo:
+        value: bar
 '#cache':
     contexts: {  }
     tags: {  }

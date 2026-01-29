@@ -47,7 +47,8 @@
                         '#items': {  }
                         '#modifier': ~
                         '#attributes':
-                            fixme: {  }
+                            fixme:
+                                value: fixme
                         '#cache':
                             contexts: {  }
                             tags: {  }
@@ -79,7 +80,8 @@
                     '#link': ~
                     '#modifiers': {  }
                     '#attributes':
-                        fixme: {  }
+                        fixme:
+                            value: fixme
                     '#cache':
                         contexts: {  }
                         tags: {  }

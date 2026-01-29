@@ -50,7 +50,8 @@
         max-age: -1
 '#controls': ~
 '#attributes':
-    hello: {  }
+    hello:
+        value: world
     class:
         - foo
 '#cache':

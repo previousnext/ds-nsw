@@ -58,7 +58,8 @@
                             max-age: -1
                 '#modifier': ~
                 '#attributes':
-                    fixme: {  }
+                    fixme:
+                        value: fixme
                 '#cache':
                     contexts: {  }
                     tags: {  }
@@ -97,7 +98,8 @@
                     max-age: -1
             '#modifiers': {  }
             '#attributes':
-                fixme: {  }
+                fixme:
+                    value: fixme
             '#cache':
                 contexts: {  }
                 tags: {  }
@@ -165,7 +167,8 @@
                             max-age: -1
                 '#modifier': ~
                 '#attributes':
-                    fixme: {  }
+                    fixme:
+                        value: fixme
                 '#cache':
                     contexts: {  }
                     tags: {  }
@@ -204,7 +207,8 @@
                     max-age: -1
             '#modifiers': {  }
             '#attributes':
-                fixme: {  }
+                fixme:
+                    value: fixme
             '#cache':
                 contexts: {  }
                 tags: {  }
@@ -272,7 +276,8 @@
                             max-age: -1
                 '#modifier': ~
                 '#attributes':
-                    fixme: {  }
+                    fixme:
+                        value: fixme
                 '#cache':
                     contexts: {  }
                     tags: {  }
@@ -311,7 +316,8 @@
                     max-age: -1
             '#modifiers': {  }
             '#attributes':
-                fixme: {  }
+                fixme:
+                    value: fixme
             '#cache':
                 contexts: {  }
                 tags: {  }
@@ -379,7 +385,8 @@
                             max-age: -1
                 '#modifier': ~
                 '#attributes':
-                    fixme: {  }
+                    fixme:
+                        value: fixme
                 '#cache':
                     contexts: {  }
                     tags: {  }
@@ -418,7 +425,8 @@
                     max-age: -1
             '#modifiers': {  }
             '#attributes':
-                fixme: {  }
+                fixme:
+                    value: fixme
             '#cache':
                 contexts: {  }
                 tags: {  }
@@ -435,7 +443,8 @@
     - md-4
 '#as': div
 '#attributes':
-    fixme: {  }
+    fixme:
+        value: fixme
 '#cache':
     contexts: {  }
     tags: {  }

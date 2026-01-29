@@ -89,7 +89,8 @@
             tags: {  }
             max-age: -1
 '#attributes':
-    foo: {  }
+    foo:
+        value: bar
     class:
         - hello
 '#cache':
