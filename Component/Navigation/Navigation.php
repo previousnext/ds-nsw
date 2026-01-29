@@ -10,7 +10,7 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Asset\Css('navigation.css', preprocess: TRUE)]
+#[Asset\Css('navigation.css', preprocess: FALSE)]
 #[Slots\Attribute\RenameSlot(original: 'menuTrees', new: 'items')]
 #[Scenarios([CommonComponent\Navigation\NavigationScenarios::class])]
 #[Slots\Attribute\ModifySlots(add: [

@@ -12,7 +12,7 @@ use PreviousNext\Ds\Common\Utility\TemplateDirectory;
 use PreviousNext\Ds\Nsw\Component;
 
 #[CanonicalProduct]
-#[DependencyOn(NswGlobal::All)]
+#[DependencyOn(NswGlobal::Global)]
 enum NswComponents implements ObjectListInterface {
 
   use NswListTrait {

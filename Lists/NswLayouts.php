@@ -11,7 +11,7 @@ use Pinto\List\ObjectListInterface;
 use PreviousNext\Ds\Nsw\Layout;
 
 #[CanonicalProduct]
-#[DependencyOn(NswGlobal::All)]
+#[DependencyOn(NswGlobal::Global)]
 enum NswLayouts implements ObjectListInterface {
 
   use NswListTrait;

@@ -12,7 +12,7 @@ use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
-#[Asset\Css('hero-banner.css', preprocess: TRUE)]
+#[Asset\Css('hero-banner.css', preprocess: FALSE)]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
 #[Slots\Attribute\RenameSlot(original: 'links', new: 'linkList')]
 #[Slots\Attribute\ModifySlots(add: [
