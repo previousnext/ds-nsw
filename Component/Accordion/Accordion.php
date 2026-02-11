@@ -7,26 +7,24 @@ namespace PreviousNext\Ds\Nsw\Component\Accordion;
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
+use PreviousNext\Ds\Common\Component\Accordion\AccordionScenarios;
 use PreviousNext\Ds\Nsw\Utility;
+use PreviousNext\IdsTools\Scenario\Scenarios;
 
 #[Asset\Css('accordion.css', preprocess: FALSE)]
 #[Asset\Js('accordion.entry.js', preprocess: FALSE, attributes: ['type' => 'module'])]
 #[Slots\Attribute\RenameSlot(original: 'containerAttributes', new: 'attributes')]
+#[Scenarios([AccordionScenarios::class])]
 class Accordion extends CommonComponent\Accordion\Accordion implements Utility\NswObjectInterface {
 
   use Utility\ObjectTrait;
 
   protected function build(Slots\Build $build): Slots\Build {
-    // @todo items.item.id  is unused by the twig
-    // @todo items.item.open  is unused by the twig
     return $build
-      // @todo title is unused by the twig
-      ->set('title', NULL)
+      ->set('title', $this->title)
       ->set('toggleAll', TRUE)
-      // @todo fix
-      // @phpstan-ignore-next-line
-      ->set('items', $this->map(static fn (AccordionItem\AccordionItem $item): mixed => $item())->toArray())
-      // @todo modifier  is unused by the twig
+      ->set('items', $this->map(static fn (CommonComponent\Accordion\AccordionItem\AccordionItem $item): mixed => $item())->toArray())
+      // Modifier is unused by the twig.
       ->set('modifier', NULL);
   }
 
