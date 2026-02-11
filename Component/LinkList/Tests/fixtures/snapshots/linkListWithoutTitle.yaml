@@ -5,10 +5,10 @@
 '#title': ~
 '#items':
     -
-        '#theme': c2e75f8655-CommonAtoms-Link
+        '#theme': 15a6a101c2-NswAtoms-Link
         '#attached':
             library:
-                - pinto/c2e75f8655-CommonAtoms-Link
+                - pinto/15a6a101c2-NswAtoms-Link
         '#title': Link!
         '#href': 'http://example.com/'
         '#more': false
@@ -23,10 +23,10 @@
             tags: {  }
             max-age: -1
     -
-        '#theme': c2e75f8655-CommonAtoms-Link
+        '#theme': 15a6a101c2-NswAtoms-Link
         '#attached':
             library:
-                - pinto/c2e75f8655-CommonAtoms-Link
+                - pinto/15a6a101c2-NswAtoms-Link
         '#title': 'Front page!'
         '#href': 'http://example.com/'
         '#more': false

@@ -1,7 +1,7 @@
-'#theme': 3b90f10624-NswAtoms-Link
+'#theme': 15a6a101c2-NswAtoms-Link
 '#attached':
     library:
-        - pinto/3b90f10624-NswAtoms-Link
+        - pinto/15a6a101c2-NswAtoms-Link
 '#title': Example
 '#href': 'http://example.com/'
 '#more': true
@@ -9,20 +9,7 @@
 '#current': false
 '#download': false
 '#iconStart': ~
-'#iconEnd':
-    '#theme': 3b90f10624-NswAtoms-Icon
-    '#attached':
-        library:
-            - pinto/3b90f10624-NswAtoms-Icon
-    '#icon': east
-    '#text': ~
-    '#alignmentType': ~
-    '#attributes': {  }
-    '#modifiers': {  }
-    '#cache':
-        contexts: {  }
-        tags: {  }
-        max-age: -1
+'#iconEnd': ~
 '#attributes': {  }
 '#cache':
     contexts: {  }
