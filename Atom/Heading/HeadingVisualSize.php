@@ -1,0 +1,49 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PreviousNext\Ds\Nsw\Atom\Heading;
+
+use PreviousNext\Ds\Common\Atom;
+use PreviousNext\Ds\Common\Modifier\Mutex;
+
+/**
+ * There is no support for H6.
+ */
+#[Mutex]
+enum HeadingVisualSize implements Atom\Heading\HeadingModifierInterface {
+
+  case One;
+  case Two;
+  case Three;
+  case Four;
+  case Five;
+
+  /**
+   * A `modifier` in heading.twig.
+   *
+   * Will be a class like `<h2 class="nsw-h5" />`.
+   */
+  public function asModifier(): string {
+    return match ($this) {
+      static::One => 'h1',
+      static::Two => 'h2',
+      static::Three => 'h3',
+      static::Four => 'h4',
+      static::Five => 'h5',
+    };
+  }
+
+  public static function fromHeadingLevel(Atom\Heading\HeadingLevel $headingLevel): static {
+    return match ($headingLevel) {
+      Atom\Heading\HeadingLevel::One => static::One,
+      Atom\Heading\HeadingLevel::Two => static::Two,
+      Atom\Heading\HeadingLevel::Three => static::Three,
+      Atom\Heading\HeadingLevel::Four => static::Four,
+      Atom\Heading\HeadingLevel::Five => static::Five,
+      // Six will pretend to be a five.
+      Atom\Heading\HeadingLevel::Six => static::Five,
+    };
+  }
+
+}

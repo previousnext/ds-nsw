@@ -1,0 +1,13 @@
+'#theme': 15a6a101c2-NswAtoms-Heading
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-Heading
+'#title': 'Heading text'
+'#as': h1
+'#attributes': {  }
+'#modifiers':
+    - h4
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
