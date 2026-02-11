@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Lists;
 
 use PreviousNext\Ds\Common\List\ListTrait;
 use PreviousNext\Ds\Common\Utility\TemplateDirectory;
+use PreviousNext\Ds\Common\Utility\TemplateFile;
 use PreviousNext\Ds\Nsw\Utility\Twig;
 
 trait NswListTrait {
@@ -13,6 +14,11 @@ trait NswListTrait {
   use ListTrait;
 
   final public function templateName(): string {
+    $customTemplateFile = ((new \ReflectionEnumUnitCase($this::class, $this->name))->getAttributes(TemplateFile::class)[0] ?? NULL)?->newInstance();
+    if ($customTemplateFile !== NULL) {
+      return $customTemplateFile->fileName;
+    }
+
     // Cap names to hyphen between, then remove leading hyphen.
     return \strtolower(\ltrim(\preg_replace_callback('/[A-Z]/', static function ($matches) {
       return '-' . $matches[0];
