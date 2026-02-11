@@ -1,0 +1,28 @@
+'#theme': 15a6a101c2-NswAtoms-LinkedImage
+'#attached':
+    library:
+        - pinto/15a6a101c2-NswAtoms-LinkedImage
+'#image':
+    '#theme': 15a6a101c2-NswAtoms-Image
+    '#attached':
+        library:
+            - pinto/15a6a101c2-NswAtoms-Image
+    '#src': /512-340-ppb.jpg
+    '#alt': Sample
+    '#width': 512
+    '#height': 340
+    '#loading': eager
+    '#sources': {  }
+    '#imageAttributes': {  }
+    '#attributes': {  }
+    '#cache':
+        contexts: {  }
+        tags: {  }
+        max-age: -1
+'#href': 'http://example.com/'
+'#attributes': {  }
+'#title': 'Linked image text!'
+'#cache':
+    contexts: {  }
+    tags: {  }
+    max-age: -1
