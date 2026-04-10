@@ -19,7 +19,7 @@ class LinkList extends CommonComponent\LinkList\LinkList implements Utility\NswO
 
   protected function build(Slots\Build $build): Slots\Build {
     // @fixme workaround scoping bug with `_class_handler.twig`
-    $this->containerAttributes['fixme'] = 'fixme';
+    $this->containerAttributes->setAttribute('fixme', 'fixme');
 
     return parent::build($build)
       ->set('items', \array_map(static function (Atom\Link\Link $link) {

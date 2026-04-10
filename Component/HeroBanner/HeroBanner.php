@@ -29,7 +29,7 @@ class HeroBanner extends CommonComponent\HeroBanner\HeroBanner implements Utilit
 
   protected function build(Slots\Build $build): Slots\Build {
     // @fixme workaround scoping bug with `_class_handler.twig`
-    $this->containerAttributes['fixme'] = 'fixme';
+    $this->containerAttributes->setAttribute('fixme', 'fixme');
 
     // Image wrapper needs a hero specific class.
     $this->image?->containerAttributes->addClass(['nsw-hero-banner__image']);

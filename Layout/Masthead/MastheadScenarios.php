@@ -35,8 +35,8 @@ final class MastheadScenarios {
       $links,
       $skipLinks,
     );
-    $instance->containerAttributes['foo'] = 'bar';
-    $instance->containerAttributes['class'][] = 'hello';
+    $instance->containerAttributes->setAttribute('foo', 'bar');
+    $instance->containerAttributes->addClass('hello');
 
     foreach (MastheadBackground::cases() as $background) {
       $i = clone $instance;

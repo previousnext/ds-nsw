@@ -33,9 +33,9 @@ final class FiltersScenarios {
     $submit->modifiers[] = ButtonStyle::Dark;
     $reset->modifiers[] = ButtonStyle::Destructive;
 
-    $instance->containerAttributes['hello'] = 'world';
-    $instance->containerAttributes['class'][] = 'foo';
-    $instance->containerAttributes['name'] = 'world';
+    $instance->containerAttributes->setAttribute('hello', 'world');
+    $instance->containerAttributes->addClass('foo');
+    $instance->containerAttributes->setAttribute('name', 'world');
 
     $instance[] = Common\Atom\Html\Html::create(Markup::create('<strong>Item</strong> One!'));
     $instance[] = $filterItem = Common\Atom\Html\Html::create(Markup::create('<strong>Item</strong> Two!'));

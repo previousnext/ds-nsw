@@ -27,8 +27,8 @@ final class CardScenarios {
       link: CommonAtom\Link\Link::create('Card Link!', $url),
     );
 
-    $image->imageAttributes['test'] = 'image-attr';
-    $image->containerAttributes['test'] = 'container-attr';
+    $image->imageAttributes->setAttribute('test', 'image-attr');
+    $image->containerAttributes->setAttribute('test', 'container-attr');
 
     return $instance;
   }

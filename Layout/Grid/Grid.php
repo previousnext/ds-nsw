@@ -22,12 +22,12 @@ class Grid extends CommonLayout\Grid\Grid implements Utility\NswObjectInterface 
 
   protected function build(Slots\Build $build): Slots\Build {
     // @fixme workaround scoping bug with `_class_handler.twig`
-    $this->containerAttributes['fixme'] = 'fixme';
+    $this->containerAttributes->setAttribute('fixme', 'fixme');
 
     foreach ($this->modifiers as $modifier) {
       if ($modifier instanceof ModifierClassInterface) {
         // Attribute guarantees 'class' offset exists.
-        $this->containerAttributes['class'][] = $modifier->className();
+        $this->containerAttributes->addClass($modifier->className());
       }
     }
 
