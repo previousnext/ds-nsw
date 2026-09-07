@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Component\Accordion;
 
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
+use PreviousNext\Ds\Common\Atom\Html\Html;
 use PreviousNext\Ds\Common\Component as CommonComponent;
 use PreviousNext\Ds\Common\Component\Accordion\AccordionScenarios;
 use PreviousNext\Ds\Nsw\Utility;
@@ -23,7 +24,7 @@ class Accordion extends CommonComponent\Accordion\Accordion implements Utility\N
     return $build
       ->set('title', $this->title)
       ->set('toggleAll', TRUE)
-      ->set('items', $this->map(static fn (CommonComponent\Accordion\AccordionItem\AccordionItem $item): mixed => $item())->toArray())
+      ->set('items', Html::createFromCollection($this))
       // Modifier is unused by the twig.
       ->set('modifier', NULL);
   }
