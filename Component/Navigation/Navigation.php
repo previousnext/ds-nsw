@@ -7,6 +7,7 @@ namespace PreviousNext\Ds\Nsw\Component\Navigation;
 use Pinto\Attribute\Asset;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
+use PreviousNext\Ds\Common\Utility\Twig as CommonTwig;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
@@ -26,10 +27,11 @@ class Navigation extends CommonComponent\Navigation\Navigation implements Utilit
 
   protected function build(Slots\Build $build): Slots\Build {
     // Mega nav doesn't seem to be working. Is this due to 'enty' typo?
+    $type = ($this->navigationType ?? NavigationType::Default)->typeName();
+
     return parent::build($build)
-      // Cant pass this as '#type' is reserved in Drupal.
-      ->set('type', NULL)
-      ->set('__twigTypeVar', ($this->navigationType ?? NavigationType::Default)->typeName());
+      ->set('type', CommonTwig::hasRenderPreprocessing() ? NULL : $type)
+      ->set('__twigTypeVar', $type);
   }
 
 }

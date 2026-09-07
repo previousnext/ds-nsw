@@ -34,6 +34,7 @@ class Steps extends CommonComponent\Steps\Steps implements Utility\NswObjectInte
     }
 
     return parent::build($build)
+      ->set('items', $this->map(static fn (CommonComponent\Steps\Step\Step $item): mixed => $item())->toArray())
       ->set('modifiers', $modifiers);
   }
 

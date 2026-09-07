@@ -13,7 +13,7 @@
     -
         - {  }
     - {  }
-'#type': ~
+'#type': __defaultUnusedValue
 '#__twigTypeVar': __defaultUnusedValue
 '#cache':
     contexts: {  }

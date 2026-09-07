@@ -50,7 +50,7 @@
             - {  }
             - {  }
         - {  }
-    '#type': ~
+    '#type': mega
     '#__twigTypeVar': mega
     '#cache':
         contexts: {  }

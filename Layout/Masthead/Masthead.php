@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Layout\Masthead;
 
 use Pinto\Attribute\Asset\Css;
 use Pinto\Slots;
+use PreviousNext\Ds\Common\Atom as CommonAtoms;
 use PreviousNext\Ds\Common\Layout as CommonLayout;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
@@ -25,6 +26,8 @@ class Masthead extends CommonLayout\Masthead\Masthead implements Utility\NswObje
 
   protected function build(Slots\Build $build): Slots\Build {
     return parent::build($build)
+      ->set('links', $this->links->map(static fn (CommonAtoms\Link\Link $item): mixed => $item())->toArray())
+      ->set('skipLinks', $this->skipLinks->map(static fn (CommonAtoms\Link\Link $item): mixed => $item())->toArray())
       ->set('background', ($this->modifiers->getFirstInstanceOf(CommonLayout\Masthead\MastheadModifierInterface::class) ?? MastheadBackground::Dark)->background());
   }
 

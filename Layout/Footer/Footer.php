@@ -6,6 +6,7 @@ namespace PreviousNext\Ds\Nsw\Layout\Footer;
 
 use Pinto\Attribute\Asset\Css;
 use Pinto\Slots;
+use PreviousNext\Ds\Common\Atom as CommonAtoms;
 use PreviousNext\Ds\Common\Component as CommonComponents;
 use PreviousNext\Ds\Common\Layout as CommonLayouts;
 use PreviousNext\Ds\Nsw\Utility;
@@ -36,6 +37,7 @@ class Footer extends CommonLayouts\Footer\Footer implements Utility\NswObjectInt
       ->set('background', ($this->modifiers->getFirstInstanceOf(FooterBackground::class) ?? FooterBackground::Dark)->background())
       ->set('containerAttributes', $this->containerAttributes)
       ->set('logo', \array_shift($logos))
+      ->set('links', $this->links->map(static fn (CommonAtoms\Link\Link $item): mixed => $item())->toArray())
       ->set('socials', $this->socialLinks)
       ->set('modifiers', $this->modifiers)
       ->set('description', $this->description)

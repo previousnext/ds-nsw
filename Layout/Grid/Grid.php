@@ -32,6 +32,7 @@ class Grid extends CommonLayout\Grid\Grid implements Utility\NswObjectInterface 
     }
 
     return parent::build($build)
+      ->set('items', $this->map(static fn (CommonLayout\Grid\GridItem\GridItem $item): mixed => $item())->toArray())
       ->set('as', $this->as->element())
       // NSW `modifiers` may only contain values from
       // GridColumnSizeModifier::classPart().

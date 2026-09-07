@@ -8,6 +8,7 @@ use Drupal\Core\Template\Attribute;
 use Pinto\Attribute\Asset\Css;
 use Pinto\Slots;
 use PreviousNext\Ds\Common\Component as CommonComponent;
+use PreviousNext\Ds\Common\Utility\Twig as CommonTwig;
 use PreviousNext\Ds\Nsw\Utility;
 use PreviousNext\IdsTools\Scenario\Scenarios;
 
@@ -56,9 +57,7 @@ class Tags extends CommonComponent\Tags\Tags implements Utility\NswObjectInterfa
         TagTypes::Text, TagTypes::Link => $this->tagAttributes ?? new Attribute(),
       })
       // Same type for all items, maybe it should be per tag?
-      // Cant pass this as '#type' is reserved in Drupal.
-      // When running outside of Drupal, type should be set as preprocessor won't work.
-      ->set('type', \class_exists(\Drupal\pnx_ds_nsw\Hook\Hooks::class) ? NULL : $this->tagType->typeName())
+      ->set('type', CommonTwig::hasRenderPreprocessing() ? NULL : $this->tagType->typeName())
       ->set('__twigTypeVar', $this->tagType->typeName());
   }
 
